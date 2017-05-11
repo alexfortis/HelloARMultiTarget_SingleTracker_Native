@@ -7,9 +7,15 @@
 
 
 struct sprite {
-    float x, y, z;
-    sprite(float xIn, float yIn, float zIn) : x(xIn), y(yIn), z(zIn) {
+    float x, y;
+    sprite(float xIn, float yIn) : x(xIn), y(yIn) {
         //do nothing
+    }
+    void moveX(float amt) { x += amt; }
+    void moveY(float amt) { y += amt; }
+    void move(float xAmt, float yAmt, float zAmt) {
+        moveX(xAmt);
+        moveY(yAmt);
     }
 };
 
