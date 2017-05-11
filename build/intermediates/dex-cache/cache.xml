@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/incremental-classes/arm/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9bf27d2d4a55a7f5157936fdf99fa8092ce5c692">
+        <dex dex="/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/transforms/dex/arm/debug/folders/1000/10000/instant-run-bootstrap_838e5c8200c2244e0c50092460bc313a6c32dcfb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/incremental-runtime-classes/arm/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/transforms/dex/arm/debug/folders/1000/10000/instant-run_7df4dd4ac2efd4750d683bbfd1093cc4475de4a7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/alexstrong/Downloads/EasyARSDKSamples/package/Android/libs/EasyAR.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="70ae6d25e42048bdf27be02bd95d5b4466b3216f">
+        <dex dex="/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/transforms/dex/arm/debug/folders/1000/2/EasyAR_3cb1545a4184bb46ff893828f9f2ba14314827be/classes.dex" />
+    </item>
+
+</items>

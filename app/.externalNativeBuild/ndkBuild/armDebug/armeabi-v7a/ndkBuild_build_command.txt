@@ -1,0 +1,21 @@
+Executable : /Users/alexstrong/Library/Android/sdk/ndk-bundle/ndk-build
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/Android.mk
+NDK_APPLICATION_MK=/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/Application.mk
+APP_ABI=armeabi-v7a
+NDK_ALL_ABIS=armeabi-v7a
+NDK_DEBUG=1
+APP_PLATFORM=android-24
+NDK_OUT=/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/ndkBuild/arm/debug/obj
+NDK_LIBS_OUT=/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/ndkBuild/arm/debug/lib
+APP_CPPFLAGS+="-I/Users/alexstrong/Downloads/EasyARSDKSamples/package/include"
+APP_CPPFLAGS+="-DANDROID"
+APP_CPPFLAGS+="-fexceptions"
+APP_CPPFLAGS+="-frtti"
+APP_SHORT_COMMANDS=false
+LOCAL_SHORT_COMMANDS=false
+-B
+-n
+jvmArgs : 
+

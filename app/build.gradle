@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+//moduleName: HelloARMultiTargetSTNative
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        applicationId = "cn.easyar.samples.helloarmultitargetst"
+        minSdkVersion 25
+        targetSdkVersion 25
+        versionCode = 1
+        versionName = "1.0"
+        externalNativeBuild{
+            ndkBuild {
+                cppFlags "-I${file("../../../package/include")}", "-DANDROID", "-fexceptions", "-frtti"
+            }
+        }
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path "src/main/jni/Android.mk"
+        }
+    }
+}
+
+android.buildTypes {
+    release {
+        minifyEnabled = false
+        proguardFiles file("proguard-rules.pro")
+    }
+}
+android.productFlavors {
+    create("arm") {
+        ndk.with {
+            abiFilters "armeabi-v7a"
+        }
+    }
+}
+android.sourceSets {
+    main {
+        jniLibs {
+            srcDirs file("../../../package/Android/libs")
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: '../../../package/Android/libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.0.0'
+}

@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/anim/abc_fade_out.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/anim/abc_fade_in.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/anim/abc_fade_in.xml"
+    }
+]

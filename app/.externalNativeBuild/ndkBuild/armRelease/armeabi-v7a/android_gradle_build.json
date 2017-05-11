@@ -1,0 +1,41 @@
+{
+  "buildFiles": [
+    "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/Android.mk",
+    "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/Users/alexstrong/Library/Android/sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-24 NDK_OUT\u003d/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/ndkBuild/arm/release/obj NDK_LIBS_OUT\u003d/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/ndkBuild/arm/release/lib APP_CPPFLAGS+\u003d\"-I/Users/alexstrong/Downloads/EasyARSDKSamples/package/include\" APP_CPPFLAGS+\u003d\"-DANDROID\" APP_CPPFLAGS+\u003d\"-fexceptions\" APP_CPPFLAGS+\u003d\"-frtti\" clean"
+  ],
+  "libraries": {
+    "HelloARNative-armRelease-armeabi-v7a": {
+      "buildCommand": "/Users/alexstrong/Library/Android/sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-24 NDK_OUT\u003d/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/ndkBuild/arm/release/obj NDK_LIBS_OUT\u003d/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/ndkBuild/arm/release/lib APP_CPPFLAGS+\u003d\"-I/Users/alexstrong/Downloads/EasyARSDKSamples/package/include\" APP_CPPFLAGS+\u003d\"-DANDROID\" APP_CPPFLAGS+\u003d\"-fexceptions\" APP_CPPFLAGS+\u003d\"-frtti\" /Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/ndkBuild/arm/release/obj/local/armeabi-v7a/libHelloARNative.so",
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "HelloARNative",
+      "files": [
+        {
+          "src": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/ar.cc",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-fno-exceptions\" \"-fno-rtti\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/../../../../../../package/include\" \"-I/Users/alexstrong/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include\" \"-I/Users/alexstrong/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include\" \"-I/Users/alexstrong/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward\" \"-I/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-DANDROID\" \"-I/Users/alexstrong/Downloads/EasyARSDKSamples/package/include\" \"-DANDROID\" \"-fexceptions\" \"-frtti\" \"--sysroot\" \"/Users/alexstrong/Library/Android/sdk/ndk-bundle/platforms/android-24/arch-arm\""
+        },
+        {
+          "src": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/helloar.cc",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-fno-exceptions\" \"-fno-rtti\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/../../../../../../package/include\" \"-I/Users/alexstrong/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include\" \"-I/Users/alexstrong/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include\" \"-I/Users/alexstrong/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward\" \"-I/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-DANDROID\" \"-I/Users/alexstrong/Downloads/EasyARSDKSamples/package/include\" \"-DANDROID\" \"-fexceptions\" \"-frtti\" \"--sysroot\" \"/Users/alexstrong/Library/Android/sdk/ndk-bundle/platforms/android-24/arch-arm\""
+        },
+        {
+          "src": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/renderer.cc",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-fno-exceptions\" \"-fno-rtti\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni/../../../../../../package/include\" \"-I/Users/alexstrong/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include\" \"-I/Users/alexstrong/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include\" \"-I/Users/alexstrong/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward\" \"-I/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-DANDROID\" \"-I/Users/alexstrong/Downloads/EasyARSDKSamples/package/include\" \"-DANDROID\" \"-fexceptions\" \"-frtti\" \"--sysroot\" \"/Users/alexstrong/Library/Android/sdk/ndk-bundle/platforms/android-24/arch-arm\""
+        }
+      ],
+      "output": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/ndkBuild/arm/release/obj/local/armeabi-v7a/libHelloARNative.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi-v7a": {
+      "cppCompilerExecutable": "/Users/alexstrong/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-g++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cc"
+  ]
+}
