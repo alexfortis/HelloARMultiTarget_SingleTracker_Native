@@ -66,35 +66,30 @@ void Renderer::init()
     glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_square);
     const GLfloat square_vertices[4][3] = {
       /* +z */ {1.0f / 2, 1.0f / 2, 0.01f / 2}, {1.0f / 2, -1.0f / 2, 0.01f / 2}, {-1.0f / 2, -1.0f / 2, 0.01f / 2}, {-1.0f / 2, 1.0f /2, 0.01f/2}
-    }
+    };
     glBufferData(GL_ARRAY_BUFFER, sizeof(square_vertices), square_vertices, GL_DYNAMIC_DRAW);
 
     // Vertex colors
     glGenBuffers(1, &vbo_color_square);
     glBindBuffer(GL_ARRAY_BUFFER, vbo_color_square);
     const GLubyte square_vertex_colors[4][4] = {
-      {225, 0, 0, 128}, {0, 255, 0, 128}, {0, 0, 255, 128}, {0, 0, 0, 0, 128}
-    }
+      {225, 0, 0, 128}, {0, 255, 0, 128}, {0, 0, 255, 128}, {0, 0, 0, 128}
+    };
     glBufferData(GL_ARRAY_BUFFER, sizeof(square_vertex_colors), square_vertex_colors, GL_STATIC_DRAW);
-
-    /*
+    // Vertex colors 2
     glGenBuffers(1, &vbo_color_square_2);
     glBindBuffer(GL_ARRAY_BUFFER, vbo_color_square_2);
-    const GLubyte cube_vertex_colors_2[8][4] = {
-        {255, 0, 0, 255}, {255, 255, 0, 255}, {0, 255, 0, 255}, {255, 0, 255, 255},
-        {255, 0, 255, 255}, {255, 255, 255, 255}, {0, 255, 255, 255}, {255, 0, 255, 255}};
-    const GLubyte pyramid_vertex_colors_2[8][4] = {
-        {255, 0, 0, 255}, {255, 255, 0, 255}, {0, 255, 0, 255}, {255, 0, 255, 255},
-        {255, 0, 255, 255}, {255, 255, 255, 255}, {0, 255, 255, 255}, {255, 0, 255, 255}};
-    glBufferData(GL_ARRAY_BUFFER, sizeof(pyramid_vertex_colors_2), pyramid_vertex_colors_2, GL_STATIC_DRAW);
-    */
+    const GLubyte square_vertex_colors_2[4][4] = {
+        {255, 0, 0, 255}, {255, 255, 0, 255}, {0, 255, 0, 255}, {255, 0, 255, 255}
+    };
+    glBufferData(GL_ARRAY_BUFFER, sizeof(square_vertex_colors_2), square_vertex_colors_2, GL_STATIC_DRAW);
 
     // Group vertices into faces
     glGenBuffers(1, &vbo_faces_square);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_faces_square);
-    const CLushort square_face[1][4] = {
+    const GLushort square_face[1][4] = {
       /* +z */ {3, 2, 1, 0}
-    }
+    };
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(square_face), square_face, GL_STATIC_DRAW);
 }
 
@@ -115,7 +110,7 @@ void Renderer::render(const Matrix44F& projectionMatrix, const Matrix44F& camera
     float height = size[0] / 1000;
     const GLfloat square_vertices[4][3] = {
       /* +z */ {size[0] / 2, size[1] / 2, height / 2}, {size[0] / 2, -size[1] / 2, height / 2}, {-size[0] / 2, -size[1] / 2, height / 2}, {-size[0] / 2, size[1] / 2, height / 2}
-    }
+    };
     glBufferData(GL_ARRAY_BUFFER, sizeof(square_vertices), square_vertices, GL_DYNAMIC_DRAW);
     // Pass vertex colors to shader
     glBindBuffer(GL_ARRAY_BUFFER, vbo_color_square);
@@ -135,10 +130,10 @@ void Renderer::render(const Matrix44F& projectionMatrix, const Matrix44F& camera
     glEnableVertexAttribArray(pos_coord_square);
     glVertexAttribPointer(pos_coord_square, 3, GL_FLOAT, GL_FALSE, 0, 0);
     // Pass vertex coords values to shader
-    const GLfloat square_vertices[4][3] = {
+    const GLfloat square_vertices_2[4][3] = {
       /* +z */ {size[0] / 4 + 3, size[1] / 4, height / 4}, {size[0] / 4 + 3, -size[1] / 4, height / 4}, {-size[0] / 4 + 3, -size[1] / 4, height / 4}, {-size[0] / 4 + 3, size[1] / 4, height / 4}
-    }
-    glBufferData(GL_ARRAY_BUFFER, sizeof(pyramid_vertices_2), pyramid_vertices_2, GL_DYNAMIC_DRAW);
+    };
+    glBufferData(GL_ARRAY_BUFFER, sizeof(square_vertices_2), square_vertices_2, GL_DYNAMIC_DRAW);
     // Pass vertex color attributes to shader
     glBindBuffer(GL_ARRAY_BUFFER, vbo_color_square_2);
     glEnableVertexAttribArray(pos_color_square);
