@@ -6,7 +6,7 @@
     density="560dpi"
     format="10"
     plugin-version="2.3.1"
-    timestamp="1494535118689"
+    timestamp="1494544212060"
     token="6877376197977200222"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -62,7 +62,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1494535118689"
+        timestamp="1494544212060"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/outputs/apk/app-arm-debug.apk"
