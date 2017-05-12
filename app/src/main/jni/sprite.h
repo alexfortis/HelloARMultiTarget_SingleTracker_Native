@@ -18,6 +18,7 @@ struct sprite {
         dir = (float)rand()/RAND_MAX;
         speed = rand()%10;
         alive = true;
+        imgPath="sightplus/argame02.jpg";
     }
     sprite() : sprite(0,0) {
         //do nothing
