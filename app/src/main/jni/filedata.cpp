@@ -34,6 +34,6 @@ namespace Smashing {
 }
 
 //JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(init_1asset_1manager(JNIEnv *env, jobject thiz, jobject assetManager)) {
-JNIEXPORT void JNICALL Java_cn_easyar_samples_helloarmultitargetst_PlatformAssetUtils_init_1asset_1manager(JNIEnv *env, jobject thiz, jobject assetManager) {
+JNIEXPORT void JNICALL Java_cn_easyar_samples_helloarmultitargetst_PlatformAssetUtils_init_1asset_1manager(JNIEnv *env, jclass thisClass, jobject assetManager) {
     Smashing::asset_manager = AAssetManager_fromJava(env, assetManager);
 }
