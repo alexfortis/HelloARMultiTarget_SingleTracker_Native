@@ -9,11 +9,21 @@ package cn.easyar.samples.helloarmultitargetst;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+import android.content.Context;
 import android.opengl.GLSurfaceView;
+
+import cn.easyar.samples.helloarmultitargetst.PlatformAssetUtils;
 
 public class Renderer implements GLSurfaceView.Renderer {
 
+    private final Context context;
+    
+    public Renderer(Context context) {
+        this.context = context;
+    }
+    
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
+        PlatformAssetUtils.init_asset_manager(context.getAssets());
         MainActivity.nativeInitGL();
     }
 

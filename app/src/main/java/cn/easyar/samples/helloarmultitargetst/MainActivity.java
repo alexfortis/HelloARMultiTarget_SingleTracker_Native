@@ -55,7 +55,7 @@ public class MainActivity extends ActionBarActivity{
         nativeInit();
 
         GLView glView = new GLView(this);
-        glView.setRenderer(new Renderer());
+        glView.setRenderer(new Renderer(this));
         glView.setZOrderMediaOverlay(true);
 
         ((ViewGroup) findViewById(R.id.preview)).addView(glView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));

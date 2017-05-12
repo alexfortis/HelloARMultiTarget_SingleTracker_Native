@@ -9,24 +9,32 @@
 
 #include "easyar/matrix.hpp"
 
+#include <string>
+
 namespace EasyAR{
 namespace samples{
 
 class Renderer
 {
 public:
+    Renderer();
+    Renderer(const std::string &vertex_shader_path,
+             const std::string &fragment_shader_path);
     void init();
-    void render(const Matrix44F& projectionMatrix, const Matrix44F& cameraview, Vec2F size);
+    void render(const Matrix44F& projectionMatrix, const Matrix44F& cameraview,
+                sprite *sprites, size_t nsprites);
+    ~Renderer();
 private:
-    unsigned int program_square;
-    int pos_coord_square;
-    int pos_color_square;
-    int pos_trans_square;
-    int pos_proj_square;
-    unsigned int vbo_coord_square;
-    unsigned int vbo_color_square;
-    unsigned int vbo_color_square_2;
-    unsigned int vbo_faces_square;
+    std::string vertex_shader_path;
+    std::string fragment_shader_path;
+    unsigned int program;
+    int pos_coord;
+    int pos_tex_coord;
+    int pos_tex_unit;
+    int pos_trans;
+    int pos_proj;
+    unsigned int vbo_coord;
+    unsigned int vbo_tex_coord;
 };
 
 }
