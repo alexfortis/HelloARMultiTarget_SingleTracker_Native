@@ -7,11 +7,13 @@
 
 #include <cstdlib>
 #include <climits>
+#include <string>
 
 struct sprite {
     float x, y, dir;
     int speed;
     bool alive;
+    std::string imgPath;
     sprite(float xIn, float yIn) : x(xIn), y(yIn) {
         dir = (float)rand()/RAND_MAX;
         speed = rand()%10;
@@ -30,6 +32,12 @@ struct sprite {
         float xAmt = speed*dir,
             yAmt = speed*(1-dir);
         move(xAmt, yAmt);
+    }
+    void die() {
+        alive = false;
+    }
+    void respawn() {
+        alive = true;
     }
 };
 
