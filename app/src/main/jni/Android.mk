@@ -10,11 +10,13 @@ include $(PREBUILT_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 LOCAL_PATH := $(LOCAL_PATH_TOP)
 LOCAL_C_INCLUDES += $(EASYAR_PACKAGE_PATH)/include
-LOCAL_CPPFLAGS += -DANDROID -Wall -Wextra -pedantic -Wfatal-errors
+LOCAL_C_INCLUDES += $(LOCAL_PATH_TOP)
+LOCAL_CPPFLAGS += -std=c++11 -DANDROID -Wall -Wextra
 LOCAL_LDLIBS += -llog -lGLESv2 -landroid
 LOCAL_STATIC_LIBRARIES := libpng
 LOCAL_SHARED_LIBRARIES += libEasyAR
 LOCAL_CPP_EXTENSION := .cc
+LOCAL_CPP_EXTENSION += .cpp
 LOCAL_MODULE := libHelloARNative
 LOCAL_SRC_FILES := ar.cc \
 		   helloar.cc \
@@ -26,5 +28,5 @@ LOCAL_SRC_FILES := ar.cc \
 		   texture.cpp
 include $(BUILD_SHARED_LIBRARY)
 
-$(call import-add-path,../../3rdparty)
+$(call import-add-path,src/3rdparty)
 $(call import-module,libpng)

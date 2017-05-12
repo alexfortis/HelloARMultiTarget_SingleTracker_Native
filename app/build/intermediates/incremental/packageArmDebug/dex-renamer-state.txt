@@ -1,7 +1,0 @@
-#Thu May 11 19:10:12 EDT 2017
-base.0=/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/transforms/dex/arm/debug/folders/1000/10000/instant-run_7df4dd4ac2efd4750d683bbfd1093cc4475de4a7
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/transforms/dex/arm/debug/folders/1000/10000/instant-run-bootstrap_838e5c8200c2244e0c50092460bc313a6c32dcfb/classes.dex
-base.1=/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/transforms/dex/arm/debug/folders/1000/10000/instant-run-bootstrap_838e5c8200c2244e0c50092460bc313a6c32dcfb
-file.0=/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/transforms/dex/arm/debug/folders/1000/10000/instant-run_7df4dd4ac2efd4750d683bbfd1093cc4475de4a7/classes.dex

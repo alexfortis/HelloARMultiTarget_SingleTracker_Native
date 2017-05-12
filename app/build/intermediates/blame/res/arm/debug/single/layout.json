@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_expanded_menu_layout.xml",
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_list_menu_item_layout.xml"
     },
     {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_screen_toolbar.xml",

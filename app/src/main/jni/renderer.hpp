@@ -7,6 +7,8 @@
 #ifndef __EASYAR_SAMPLE_UTILITY_SIMPLERENDERER_H__
 #define __EASYAR_SAMPLE_UTILITY_SIMPLERENDERER_H__
 
+#include "sprite.h"
+
 #include "easyar/matrix.hpp"
 
 #include <string>
@@ -21,7 +23,9 @@ public:
     Renderer(const std::string &vertex_shader_path,
              const std::string &fragment_shader_path);
     void init();
-    void render(const Matrix44F& projectionMatrix, const Matrix44F& cameraview,
+    void render(const Matrix44F& projectionMatrix,
+                const Matrix44F& cameraview,
+                Vec2F size,
                 sprite *sprites, size_t nsprites);
     ~Renderer();
 private:

@@ -22,8 +22,8 @@ namespace Smashing {
 
     glBindTexture(GL_TEXTURE_2D, gl_texture_);
 
-    glTexParamteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-    glTexParamteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexImage2D(GL_TEXTURE_2D,
                  0, type, width, height,
                  0, type, GL_UNSIGNED_BYTE, pixels);
@@ -32,6 +32,6 @@ namespace Smashing {
     glBindTexture(GL_TEXTURE_2D, 0);
   }
 
-  GLuint gl_texture(void) { return gl_texture_; }
+  GLuint Texture::gl_texture(void) { return gl_texture_; }
   
 }

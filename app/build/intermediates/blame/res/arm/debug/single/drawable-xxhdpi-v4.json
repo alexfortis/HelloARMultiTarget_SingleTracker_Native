@@ -4,12 +4,12 @@
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/drawable-xxhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png",
-        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png"
-    },
-    {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/drawable-xxhdpi-v4/abc_ic_star_half_black_36dp.png",

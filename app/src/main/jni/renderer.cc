@@ -33,7 +33,7 @@ void Renderer::init()
 {
     // Setup shaders
     program =
-      build_program_from_assets(vertex_shader_path, fragment_shader_path);
+      Smashing::build_program_from_assets(vertex_shader_path, fragment_shader_path);
     glUseProgram(program);
 
     // ??? semantic binding?
@@ -60,7 +60,7 @@ void Renderer::render(const Matrix44F& projectionMatrix,
     for (size_t i = 0; i < nsprites; i++) {
       // Pass texture to shader
       glActiveTexture(GL_TEXTURE0);
-      GLuint texture = load_png_asset_into_texture(sprites[i].imgFile);
+      GLuint texture = Smashing::load_png_asset_into_texture(sprites[i].imgPath);
       glBindTexture(GL_TEXTURE_2D, texture);
       glUniform1i(pos_tex_unit, 0);
 
@@ -78,7 +78,7 @@ void Renderer::render(const Matrix44F& projectionMatrix,
       // Pass texture coords attributes to shader
       glBindBuffer(GL_ARRAY_BUFFER, vbo_tex_coord);
       glEnableVertexAttribArray(pos_tex_coord);
-      glVertexAttribPointer(pos_tex_coor, 2, GL_FLOAT, GL_FALSE, 0, 0);
+      glVertexAttribPointer(pos_tex_coord, 2, GL_FLOAT, GL_FALSE, 0, 0);
       // Pass texture coords values to shader
       glBindBuffer(GL_ARRAY_BUFFER, vbo_tex_coord);
       const GLfloat tex_coords[4][2] = {
@@ -91,7 +91,7 @@ void Renderer::render(const Matrix44F& projectionMatrix,
       glUniformMatrix4fv(pos_proj, 1, 0, projectionMatrix.data);
       
       // Render sprite
-      glDrawArrarys(GL_TRIANGLE_STRIP, 0, 4);
+      glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
       // Release buffer binding
       glBindBuffer(GL_ARRAY_BUFFER, 0);

@@ -5,6 +5,12 @@
 #include "shader.hpp"
 #include "texture.hpp"
 
+#if defined __APPLE__
+#include <OpenGLES/ES2/gl.h>
+#else
+#include <GLES2/gl2.h>
+#endif
+
 #include <cassert>
 
 namespace Smashing {
@@ -28,9 +34,9 @@ namespace Smashing {
     FileData vertex_shader_source(vertex_shader_path);
     FileData fragment_shader_source(fragment_shader_path);
     const GLuint program =
-      build_program(vertex_shader_source.data(),
+      build_program((const GLchar*) vertex_shader_source.data(),
                     vertex_shader_source.data_length(),
-                    fragment_shader_source.data(),
+                    (const GLchar*) fragment_shader_source.data(),
                     fragment_shader_source.data_length());
 
     return program;

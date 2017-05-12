@@ -6,13 +6,11 @@
 #ifndef SHADER_HPP
 #define SHADER_HPP
 
-/* Uncomment if compiler complains about GLenum
 #if defined __APPLE__
 #include <OpenGLES/ES2/gl.h>
 #else
 #include <GLES2/gl2.h>
 #endif
-*/
 
 namespace Smashing {
 

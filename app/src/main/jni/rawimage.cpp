@@ -4,7 +4,7 @@
 #include <cstring>
 #include <string>
 
-#include <png.h>
+#include "../../3rdparty/libpng/png.h"
 
 namespace Smashing {
   
@@ -32,8 +32,8 @@ namespace Smashing {
   static void read_png_data_callback(png_structp png_ptr,
                                      png_byte *png_data,
                                      png_size_t read_length) {
-    ReadDataHandle *handle = png_get_io_ptr(png_ptr);
-    const png_byte *png_src = handle->data.data + handle->offset;
+    ReadDataHandle *handle = (ReadDataHandle *)png_get_io_ptr(png_ptr);
+    png_byte * png_src = const_cast<png_byte*>(handle->data.data) + handle->offset;
 
     //memcpy(png_data, png_src, read_length); // memcpy(dest, src, len)
     memcpy(png_src, png_data, read_length); // png_data is newly read data
@@ -146,14 +146,14 @@ namespace Smashing {
   // Methods
 
   RawImage::RawImage() {
-    width = height = size = 0;
-    gl_color_format = 0;
-    data = std::nullptr;
+    width_ = height_ = size_ = 0;
+    gl_color_format_ = 0;
+    data_ = nullptr;
   }
 
   RawImage::~RawImage() {
-    assert(data != NULL);
-    delete data;
+    assert(data_ != nullptr);
+    delete data_;
   }
 
   void RawImage::load_from_png(const void *png_data, const int png_data_size) {
@@ -169,7 +169,7 @@ namespace Smashing {
 
     // read PNG, libpng will call callback for each part of the PNG
     ReadDataHandle png_data_handle = (ReadDataHandle) {
-      { png_data, png_data_size }, 0
+      { (const png_byte*)png_data, png_data_size }, 0
     };
     png_set_read_fn(png_ptr, &png_data_handle, read_png_data_callback);
     if (setjmp(png_jmpbuf(png_ptr))) {
@@ -191,7 +191,7 @@ namespace Smashing {
     height_ = png_info.height;
     size_ = raw_image.size;
     gl_color_format_ = get_gl_color_format(png_info.color_type);
-    data_ = raw_image.data;
+    data_ = (void*)const_cast<png_byte*>(raw_image.data);
   }
 
   int RawImage::width(void) { return width_; }

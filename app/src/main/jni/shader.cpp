@@ -7,7 +7,7 @@ namespace Smashing {
   GLuint compile_shader(const GLenum type, const GLchar *source,
                         const GLint length) {
     assert(source != NULL);
-    GLuing shader_obj_id = glCreateShader(type);
+    GLuint shader_obj_id = glCreateShader(type);
     GLint compile_status;
     assert(shader_obj_id != 0);
     

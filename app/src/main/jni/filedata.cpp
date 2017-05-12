@@ -5,13 +5,11 @@
 
 #include "android/asset_manager_jni.h"
 
+#define JNIFUNCTION_NATIVE(sig) Java_cn_easyar_samples_helloarmultitargetst_PlatformAssetUtils_##sig
+
 namespace Smashing {
 
   static AAssetManager *asset_manager;
-
-  JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(init_asset_manager(JNIEnv *env, jobject, jobject assetManager)) {
-    asset_utils = AAssetManager_fromJava(env, assetManager);
-  }
   
   // Methods
   
@@ -30,7 +28,12 @@ namespace Smashing {
     AAsset_close((AAsset *)(this->file_handle_));
   }
 
-  void *FileData::data(void) { return data_; }
+  const void *FileData::data(void) { return data_; }
   long FileData::data_length(void) { return data_length_; }
   
+}
+
+//JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(init_1asset_1manager(JNIEnv *env, jobject thiz, jobject assetManager)) {
+JNIEXPORT void JNICALL Java_cn_easyar_samples_helloarmultitargetst_PlatformAssetUtils_init_1asset_1manager(JNIEnv *env, jobject thiz, jobject assetManager) {
+    Smashing::asset_manager = AAssetManager_fromJava(env, assetManager);
 }
