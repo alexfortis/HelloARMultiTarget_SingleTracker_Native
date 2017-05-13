@@ -88,10 +88,14 @@ void Renderer::render(const Matrix44F& projectionMatrix,
       glBindBuffer(GL_ARRAY_BUFFER, vbo_coord);
       const GLfloat coords[4][3] = {
         /* +z */
-        {size[0] / 2, size[1] / 2, height / 2},
-        {size[0] / 2, -size[1] / 2, height / 2},
-        {-size[0] / 2, -size[1] / 2, height / 2},
-        {-size[0] / 2, size[1] / 2, height / 2}
+        // {size[0] / 2, size[1] / 2, height / 2},
+        // {size[0] / 2, -size[1] / 2, height / 2},
+        // {-size[0] / 2, -size[1] / 2, height / 2},
+        // {-size[0] / 2, size[1] / 2, height / 2}
+        {-1.0f, -1.0f, 0.05f},
+        {-1.0f, 1.0f, 0.05f},
+        {1.0f, -1.0f, 0.05f},
+        {1.0f, 1.0f, 0.05f},
       };
       glBufferData(GL_ARRAY_BUFFER, sizeof(coords), coords, GL_DYNAMIC_DRAW);
       LOGI("pass vertex coords values to shader complete\n");
@@ -105,7 +109,8 @@ void Renderer::render(const Matrix44F& projectionMatrix,
       const GLfloat tex_coords[4][2] = {
         //{1.0f, 1.0f}, {1.0f, 0.0f}, {0.0f, 0.0f}, {0.0f, 1.0f} // upside down
         //{1.0f, 1.0f}, {0.0f, 1.0f}, {0.0f, 0.0f}, {1.0f, 0.0f} // turned 270
-        {1.0f, 0.0f} ,{1.0f, 1.0f}, {0.0f, 1.0f}, {0.0f, 0.0f}
+        //{1.0f, 0.0f} ,{1.0f, 1.0f}, {0.0f, 1.0f}, {0.0f, 0.0f}
+        {0.0f, 0.0f}, {0.0f, 0.1f}, {1.0f, 0.0f}, {1.0f, 1.0f}, 
       };
       glBufferData(GL_ARRAY_BUFFER, sizeof(tex_coords), tex_coords, GL_DYNAMIC_DRAW);
       LOGI("pass texture coords values to shader complete\n");
