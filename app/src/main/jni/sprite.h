@@ -19,7 +19,7 @@ struct sprite {
         dir = 2*(float)rand()/RAND_MAX-1;
         speed = (float)rand()/RAND_MAX * TOTAL_SPEED;
         alive = true;
-        imgPath="ant.png";
+        imgPath=/*"ant.png"*/"old_schedule.png";
     }
 sprite() : sprite((int)rand()%4-2, (int)rand()%4-2) {
         //do nothing

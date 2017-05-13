@@ -55,6 +55,7 @@ HelloAR::HelloAR()
 {
     view_size[0] = -1;
     srand(time(NULL));
+    renderer = Renderer("shaders/png.vsh", "shaders/png.fsh");
 }
 
 void HelloAR::initGL()
