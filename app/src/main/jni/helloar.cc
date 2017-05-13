@@ -49,17 +49,19 @@ namespace EasyAR {
         static const char * foot_image;
         static const char * game_image;
         static const float activationThreshold;
+        static const int deathTimeout;
 
       private:
         sprite sprites[MAX_SPRITES];
         Vec2I view_size;
         Renderer renderer;
-        bool posePrinted;
+        bool foot_contact;
     };
 
     const char * HelloAR::foot_image = "pebbles";
     const char * HelloAR::game_image = "candy";
     const float HelloAR::activationThreshold = 0.5;
+    const int HelloAR::deathTimeout = 25;
 
     HelloAR::HelloAR() : renderer("shaders/png.vsh", "shaders/png.fsh") {
       view_size[0] = -1;
@@ -153,12 +155,36 @@ namespace EasyAR {
           if (sprites[i].state == sprite::SpriteState::ALIVE) {
             if (abs(sprites[i].x - foot_pose.data[0]) < HelloAR::activationThreshold &&
                 abs(sprites[i].y - foot_pose.data[1]) < HelloAR::activationThreshold) {
-              sprites[i].state = sprite::SpriteState::HIDDEN;
-              LOGI("Sprite %d now hidden", i);
+                if (foot_contact) {
+                  sprites[i].state = sprite::SpriteState::SMASHED;
+                  LOGI("Sprite %d now smashed", i);
+                } else {
+                  sprites[i].state = sprite::SpriteState::HIDDEN;
+                  LOGI("Sprite %d now hidden", i);
+                }
             }
           } else if (sprites[i].state == sprite::SpriteState::HIDDEN) {
-            // Here need to check for contact to update state
-            continue;
+            if (abs(sprites[i].x - foot_pose.data[0]) >= HelloAR::activationThreshold &&
+                abs(sprites[i].y - foot_pose.data[1]) >= HelloAR::activationThreshold) {
+              sprites[i].state = sprite::SpriteState::ALIVE;
+            } else {
+              if (foot_contact) {
+                sprites[i].state = sprite::SpriteState::SMASHED;
+                sprites[i].time_out = HelloAR::deathTimeout;
+              }
+            }
+          } else if (sprites[i].state == sprite::SpriteState::SMASHED) {
+            if (sprite.time_out == 0) {
+              sprite[i].state == sprite::SpriteState::DEAD;
+            } else {
+              sprite.time_out--;
+            }
+          }
+        }
+      } else { // If no foot, make all non-dead ones alive
+        for (int i = 0; i < MAX_SPRITES; ++i) {
+          if (sprites[i].state != sprite::SpriteState::DEAD) {
+            sprites[i].state = sprite::SpriteState::ALIVE;
           }
         }
       }

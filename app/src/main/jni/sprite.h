@@ -20,7 +20,8 @@ struct sprite {
 
   float x, y, dir, speed;
   std::string imgPath;
-  sprite(float xIn, float yIn) : x(xIn), y(yIn) {
+  int time_out;
+  sprite(float xIn, float yIn) : x(xIn), y(yIn), time_out(0) {
     dir = 2*(float)rand()/RAND_MAX-1;
     speed = (float)rand()/RAND_MAX * TOTAL_SPEED;
     state = ALIVE;
