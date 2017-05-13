@@ -148,7 +148,7 @@ namespace Smashing {
     case PNG_COLOR_TYPE_GRAY:
       return GL_LUMINANCE;
     case PNG_COLOR_TYPE_RGB_ALPHA:
-      return GL_RGBA;
+      return GL_RGBA8;
     case PNG_COLOR_TYPE_GRAY_ALPHA:
       return GL_LUMINANCE_ALPHA;
     }
