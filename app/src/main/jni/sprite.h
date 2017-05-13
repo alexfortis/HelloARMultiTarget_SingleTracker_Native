@@ -10,6 +10,8 @@
 #include <string>
 
 #define TOTAL_SPEED 0.0025
+#define BOARD_LENGTH 6
+#define BOARD_WIDTH 6
 
 struct sprite {
 
