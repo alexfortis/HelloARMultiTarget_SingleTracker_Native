@@ -6,6 +6,8 @@
 
 #include "ar.hpp"
 #include "renderer.hpp"
+#include "box_renderer.hpp"
+#include "png_renderer.hpp"
 #include "sprite.h"
 #include <jni.h>
 #include <GLES3/gl31.h>
@@ -109,13 +111,13 @@ namespace EasyAR {
       augmenter_.drawVideoBackground();
       glViewport(viewport_[0], viewport_[1], viewport_[2], viewport_[3]);
 
-      // Find the indices of the specific targets 
+      // Find the indices of the specific targets
       int game_target = -1, foot_target = -1;
       for (int i = 0; i < frame.targets().size(); ++i) {
         Target target = frame.targets()[i].target();
-        if (strcmp(target.name(), HelloAR::foot_image) == 0) 
+        if (strcmp(target.name(), HelloAR::foot_image) == 0)
           foot_target = i;
-        else if (strcmp(target.name(), HelloAR::game_image) == 0) 
+        else if (strcmp(target.name(), HelloAR::game_image) == 0)
           game_target = i;
       }
 
@@ -132,7 +134,7 @@ namespace EasyAR {
       // Get positioning data for the foot
       Matrix34F foot_pose;
       bool foot_valid = false;
-      if (foot_target != -1 && 
+      if (foot_target != -1 &&
           frame.targets()[foot_target].status() == AugmentedTarget::kTargetStatusTracked) {
         foot_pose = frame.targets()[foot_target].pose();
         foot_valid = true;
@@ -142,7 +144,7 @@ namespace EasyAR {
 
       // If the game target is not in the scene - just return
       // ---- may need to render without objects?
-      if (game_target == -1 || 
+      if (game_target == -1 ||
           frame.targets()[game_target].status() != AugmentedTarget::kTargetStatusTracked) {
         return;
       }
