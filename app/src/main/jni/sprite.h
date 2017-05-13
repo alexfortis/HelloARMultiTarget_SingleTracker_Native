@@ -39,7 +39,22 @@ struct sprite {
 
   void move() {
     float xAmt = speed*dir,
-          yAmt = speed*(TOTAL_SPEED-dir);
+          yAmt = dir*(TOTAL_SPEED-speed);
+    if(x+xAmt <= -BOARD_WIDTH/2 || x+xAmt >= BOARD_WIDTH/2) {
+      if(y+yAmt <= -BOARD_LENGTH/2 || y+yAmt >= BOARD_LENGTH/2) {
+        //change both the x and y directions
+        dir = -dir;
+      }
+      else {
+        //change only the x direction
+        dir = -dir;
+        speed = 2*TOTAL_SPEED - speed;
+      }
+    }
+    else if(y+yAmt <= -BOARD_LENGTH/2 || y+yAmt >= BOARD_LENGTH/2) {
+      //change only the y direction
+      speed = 2*TOTAL_SPEED-speed;
+    }
     move(xAmt, yAmt);
   }
 
