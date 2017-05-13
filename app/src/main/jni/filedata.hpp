@@ -8,7 +8,11 @@
 
 #include <string>
 
+#include "android/asset_manager_jni.h"
+
 namespace Smashing {
+
+  static AAssetManager *asset_manager;
 
   class FileData {
   public:

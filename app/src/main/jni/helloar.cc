@@ -21,7 +21,7 @@
 #endif
 
 #define JNIFUNCTION_NATIVE(sig) Java_cn_easyar_samples_helloarmultitargetst_MainActivity_##sig
-#define MAX_SPRITES 10
+#define MAX_SPRITES 5
 #define FOOT_TARGET 0
 #define SPRITE_TARGET 1
 
@@ -77,6 +77,7 @@ void HelloAR::updateSprites() {
 
 void HelloAR::render()
 {
+    //LOGI("logging\n");
     glClearColor(0.f, 0.f, 0.f, 1.f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -90,31 +91,32 @@ void HelloAR::render()
     augmenter_.drawVideoBackground();
     glViewport(viewport_[0], viewport_[1], viewport_[2], viewport_[3]);
 
-    /*for (int i = 0; i < frame.targets().size(); ++i) {
+    for (int i = 0; i < frame.targets().size(); ++i) {
         AugmentedTarget::Status status = frame.targets()[i].status();
         if (status == AugmentedTarget::kTargetStatusTracked) {
             Matrix44F projectionMatrix = getProjectionGL(camera_.cameraCalibration(), 0.2f, 500.f);
             Matrix44F cameraview = getPoseGL(frame.targets()[i].pose());
             ImageTarget target = frame.targets()[i].target().cast_dynamic<ImageTarget>();
-            renderer.render(projectionMatrix, cameraview, target.size());
+            renderer.render(projectionMatrix, cameraview, target.size(), sprites, MAX_SPRITES);
+            //LOGI("tracking the sprite target %s\n", frame.targets()[i].target().name());
         }
-    }*/
+    }
     //process the sprites
-    {
-        AugmentedTarget tg = frame.targets()[SPRITE_TARGET];
-        //std::cout << tg.target().id() << std::endl;
-        if(tg.status() == AugmentedTarget::kTargetStatusTracked) {
-            LOGI("tracking the sprite target %s\n", tg.target().name());
-        }
-    }
-    //process the foot
-    {
-        AugmentedTarget tg = frame.targets()[FOOT_TARGET];
-        //std::cout << tg.target().id() << std::endl;
-        if(tg.status() == AugmentedTarget::kTargetStatusTracked) {
-            LOGI("tracking the foot target %s\n", tg.target().name());
-        }
-    }
+    /*{
+              AugmentedTarget tg = frame.targets()[SPRITE_TARGET];
+              //std::cout << tg.target().id() << std::endl;
+              if(tg.status() == AugmentedTarget::kTargetStatusTracked) {
+                  LOGI("tracking the sprite target %s\n", tg.target().name());
+              }
+          }
+          //process the foot
+          {
+              AugmentedTarget tg = frame.targets()[FOOT_TARGET];
+              //std::cout << tg.target().id() << std::endl;
+              if(tg.status() == AugmentedTarget::kTargetStatusTracked) {
+                  LOGI("tracking the foot target %s\n", tg.target().name());
+              }
+          }*/
 }
 
 }
@@ -149,6 +151,7 @@ JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(nativeResizeGL(JNIEnv*, jobject, jint 
 
 JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(nativeRender(JNIEnv*, jobject))
 {
+    ar.updateSprites();
     ar.render();
 }
 

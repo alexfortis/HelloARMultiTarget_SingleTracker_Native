@@ -23,7 +23,8 @@ public class Renderer implements GLSurfaceView.Renderer {
     }
     
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-        PlatformAssetUtils.init_asset_manager(context.getAssets());
+        //tried but failed to use the JNI
+        //PlatformAssetUtils.init_asset_manager(context.getAssets());
         MainActivity.nativeInitGL();
     }
 

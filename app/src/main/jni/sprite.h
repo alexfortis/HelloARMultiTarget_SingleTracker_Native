@@ -9,18 +9,19 @@
 #include <climits>
 #include <string>
 
+#define TOTAL_SPEED 0.0025
+
 struct sprite {
-    float x, y, dir;
-    int speed;
+    float x, y, dir, speed;
     bool alive;
     std::string imgPath;
     sprite(float xIn, float yIn) : x(xIn), y(yIn) {
-        dir = (float)rand()/RAND_MAX;
-        speed = rand()%10;
+        dir = 2*(float)rand()/RAND_MAX-1;
+        speed = (float)rand()/RAND_MAX * TOTAL_SPEED;
         alive = true;
         imgPath="ant.png";
     }
-    sprite() : sprite(0,0) {
+sprite() : sprite((int)rand()%4-2, (int)rand()%4-2) {
         //do nothing
     }
     void moveX(float amt) { x += amt; }
@@ -31,7 +32,7 @@ struct sprite {
     }
     void move() {
         float xAmt = speed*dir,
-            yAmt = speed*(1-dir);
+            yAmt = speed*(TOTAL_SPEED-dir);
         move(xAmt, yAmt);
     }
     void die() {
