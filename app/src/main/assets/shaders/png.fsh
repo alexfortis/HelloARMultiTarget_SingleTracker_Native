@@ -7,5 +7,8 @@ uniform sampler2D tex_unit;
 varying vec2 vtex_coord;
 
 void main(void) {
-     gl_FragColor = texture2D(tex_unit, vtex_coord);
+     vec4 tex_color = texture2D(tex_unit, vtex_coord);
+     if (tex_color < 0.1)
+        discard;
+     gl_FragColor = tex_color;
 }
