@@ -52,6 +52,10 @@ namespace EasyAR {
         static const float activationThreshold;
         static const int deathTimeout;
 
+        void setContact(bool contact) {
+          foot_contact = contact;
+        }
+
       private:
         sprite sprites[MAX_SPRITES];
         Vec2I view_size;
@@ -241,4 +245,5 @@ JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(nativeRotationChange(JNIEnv*, jobject,
 }
 
 JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(contactChanged(JNIEnv*, jobject, jboolean contact)) {
+  ar.setContact(contact);
 }
