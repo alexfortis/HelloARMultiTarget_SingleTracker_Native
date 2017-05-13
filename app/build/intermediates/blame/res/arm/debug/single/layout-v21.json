@@ -4,6 +4,10 @@
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout-v21/notification_action_tombstone.xml"
     },
     {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout-v21/notification_action.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout-v21/notification_action.xml"
+    },
+    {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout-v21/notification_template_custom_big.xml",
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout-v21/notification_template_custom_big.xml"
     },
@@ -12,7 +16,19 @@
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout-v21/notification_action.xml"
     },
     {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout-v21/notification_template_icon_group.xml",
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout-v21/notification_template_custom_big.xml"
     }
 ]

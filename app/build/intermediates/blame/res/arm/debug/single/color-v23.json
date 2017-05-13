@@ -1,7 +1,19 @@
 [
     {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_tint_edittext.xml",
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_tint_spinner.xml",
@@ -12,12 +24,28 @@
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/color-v23/abc_color_highlight_material.xml"
     },
     {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_tint_default.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_tint_switch_track.xml",
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/color-v23/abc_tint_switch_track.xml"
     },
     {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/color-v23/abc_tint_seek_thumb.xml"
     },
     {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_tint_seek_thumb.xml",
@@ -34,5 +62,13 @@
     {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_tint_default.xml",
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/color-v23/abc_tint_btn_checkable.xml"
     }
 ]

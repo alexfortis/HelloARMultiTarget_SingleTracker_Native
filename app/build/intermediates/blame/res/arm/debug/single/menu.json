@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/menu/menu_main.xml",
+        "source": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/res/menu/menu_main.xml"
+    },
+    {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/menu/menu_main.xml",
         "source": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/res/menu/menu_main.xml"
     }

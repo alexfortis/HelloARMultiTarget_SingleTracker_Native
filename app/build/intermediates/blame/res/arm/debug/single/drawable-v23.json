@@ -2,5 +2,9 @@
     {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/drawable-v23/abc_control_background_material.xml",
         "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/drawable-v23/abc_control_background_material.xml"
+    },
+    {
+        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/drawable-v23/abc_control_background_material.xml",
+        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/drawable-v23/abc_control_background_material.xml"
     }
 ]

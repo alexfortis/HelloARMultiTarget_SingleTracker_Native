@@ -2,14 +2,29 @@
   "images" :
   [
     {
-      "image" : "sightplus/argame00.jpg",
-      "name" : "argame"
+      "image" : "image_targets/candy.jpg",
+      "name" : "candy",
+      "size" : []
     },
     {
-      "image" : "idback.jpg",
-      "name" : "idback",
-      "size" : [8.56, 5.4],
-      "uid" : "uid-string"
+      "image" : "image_targets/qrcode.jpg",
+      "name" : "qrcode",
+      "size" : []
+    },
+    {
+      "image" : "image_targets/qrcode.jpg",
+      "name" : "qrcode-small",
+      "size" : []
+    },
+    {
+      "image" : "image_targets/pebbles.jpg",
+      "name" : "pebbles",
+      "size" : []
+    },
+    {
+      "image" : "image_targets/geometric2.jpg",
+      "name" : "geometric-small",
+      "size" : []
     }
   ]
 }

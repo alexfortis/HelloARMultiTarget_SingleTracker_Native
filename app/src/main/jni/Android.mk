@@ -1,5 +1,5 @@
 LOCAL_PATH_TOP := $(call my-dir)
-EASYAR_PACKAGE_PATH := $(LOCAL_PATH_TOP)/../../../../../../package
+EASYAR_PACKAGE_PATH := /opt/android-easyar/EasyARSDK/package
 
 include $(CLEAR_VARS)
 LOCAL_PATH := $(EASYAR_PACKAGE_PATH)/Android/libs/armeabi-v7a
