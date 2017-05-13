@@ -22,6 +22,11 @@
       "size" : [25.5, 16.5]
     },
     {
+      "image" : "image_targets/pebbles.jpg",
+      "name" : "pebbles-small",
+      "size" : [10.1, 6.4]
+    },
+    {
       "image" : "image_targets/geometric2.jpg",
       "name" : "geometric-small",
       "size" : [8.9, 8.9]

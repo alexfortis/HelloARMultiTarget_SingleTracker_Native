@@ -69,7 +69,7 @@ namespace EasyAR {
         bool foot_contact;
     };
 
-    const char * HelloAR::foot_image = "pebbles";
+    const char * HelloAR::foot_image = "pebbles-small";
     const char * HelloAR::game_image = "candy";
     const float HelloAR::activationThreshold = 0.5;
     const int HelloAR::deathTimeout = 25;
