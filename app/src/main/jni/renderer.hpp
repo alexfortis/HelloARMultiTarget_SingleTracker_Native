@@ -19,28 +19,36 @@ namespace samples{
 class Renderer
 {
 public:
-    //Renderer();
-    //Renderer(const std::string &vertex_shader_path,
-      //       const std::string &fragment_shader_path);
+    Renderer();
+    Renderer(const std::string &vertex_shader_path,
+             const std::string &fragment_shader_path);
     void init();
     void render(const Matrix44F& projectionMatrix,
                 const Matrix44F& cameraview,
                 Vec2F size,
                 sprite *sprites, size_t nsprites);
-    //~Renderer();
+    ~Renderer();
 private:
-    //std::string vertex_shader_path;
-    //std::string fragment_shader_path;
-    unsigned int program_box;
-    int pos_coord_box;
-    int pos_color_box;
+    std::string vertex_shader_path;
+    std::string fragment_shader_path;
+    unsigned int program;
+    int pos_coord;
+    int pos_tex_coord;
+    int pos_tex_unit;
+    int pos_trans;
+    int pos_proj;
+    unsigned int vbo_coord;
+    unsigned int vbo_tex_coord;
+    //unsigned int program_box;
+    //int pos_coord_box;
+    //int pos_color_box;
     //int pos_color_box_2;
-    int pos_trans_box;
-    int pos_proj_box;
-    unsigned int vbo_coord_box;
-    unsigned int vbo_color_box;
-    unsigned int vbo_color_box_2;
-    unsigned int vbo_faces_box;
+    //int pos_trans_box;
+    //int pos_proj_box;
+    //unsigned int vbo_coord_box;
+    //unsigned int vbo_color_box;
+    //unsigned int vbo_color_box_2;
+    //unsigned int vbo_faces_box;
 };
 
 }
