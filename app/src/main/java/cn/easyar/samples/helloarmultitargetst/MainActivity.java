@@ -90,10 +90,15 @@ public class MainActivity extends AppCompatActivity {
             //Log.i(TAG, "BC Recv with action: " + action);
             if (BLEService.ACTION_DATA_AVAILABLE.equals(action)) {
 
-                contact = intent.getBooleanExtra(BLEService.CONTACT_STATE, false);
+                boolean newContact = intent.getBooleanExtra(BLEService.CONTACT_STATE, false);
 
-                Log.i(TAG, "Contact pad status has changed");
-                Log.i(TAG, "Contact value: " + contact);
+
+                if (contact != newContact) {
+                    contact = newContact;
+                    contactChanged(contact);
+                    Log.i(TAG, "Contact pad status has changed");
+                    Log.i(TAG, "Contact value: " + contact);
+                }
             }
         }
     };

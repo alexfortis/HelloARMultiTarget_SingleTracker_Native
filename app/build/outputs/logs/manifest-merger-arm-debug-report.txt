@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:2:1-25:12
+ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:3:5-53
 		INJECTED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml
@@ -25,8 +25,20 @@ uses-permission#android.permission.INTERNET
 ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:6:5-67
 	android:name
 		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.BLUETOOTH
+ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:8:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:9:5-73
+	android:name
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:9:22-71
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:10:22-78
 application
-ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:7:5-23:19
+ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:12:5-31:19
 MERGED from [com.android.support:appcompat-v7:25.0.0] /home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:25.0.0] /home/ryan/.android/build-cache/678bd042242d8ff3683ed537be5802b812ae0120/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-fragment:25.0.0] /home/ryan/.android/build-cache/5dc9b5be69d7135b395bb6bd06ec48164a8dc518/output/AndroidManifest.xml:25:5-20
@@ -37,33 +49,39 @@ MERGED from [com.android.support:animated-vector-drawable:25.0.0] /home/ryan/.an
 MERGED from [com.android.support:support-vector-drawable:25.0.0] /home/ryan/.android/build-cache/5228b1bd3289f80ccef79e40fb5926ef2566d838/output/AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:support-compat:25.0.0] /home/ryan/.android/build-cache/fd8ba34b12a0dfcdb60ed9b39011c3984198f5c8/output/AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:15:9-41
 	android:allowBackup
-		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:8:9-35
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:13:9-35
 	android:icon
-		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:9:9-43
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:14:9-43
 	android:theme
-		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:16:9-40
 activity#cn.easyar.samples.helloarmultitargetst.MainActivity
-ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:12:9-22:20
+ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:17:9-27:20
 	android:screenOrientation
-		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:14:13-50
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:19:13-50
 	android:label
-		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:16:13-45
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:21:13-45
 	android:configChanges
-		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:15:13-93
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:20:13-93
 	android:name
-		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:13:13-79
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:18:13-79
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:17:13-21:29
+ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
-ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:18:17-69
+ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:23:17-69
 	android:name
-		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:18:25-66
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:23:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:20:17-77
+ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:20:27-74
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:25:27-74
+service#cn.easyar.samples.helloarmultitargetst.BLEService
+ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:28:9-30:37
+	android:exported
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:30:11-35
+	android:name
+		ADDED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml:29:11-37
 uses-sdk
 INJECTED from /home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.0.0] /home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/AndroidManifest.xml:21:5-23:78

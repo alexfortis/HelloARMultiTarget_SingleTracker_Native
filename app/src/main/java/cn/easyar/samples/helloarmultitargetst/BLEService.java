@@ -128,7 +128,9 @@ public class BLEService extends Service {
             final byte[] data = characteristic.getValue();
             if (data != null && data.length > 0) {
                 // Only care about the most recent item
-                final int mContact = data[data.length - 1];
+                Byte contactValue = new Byte(data[data.length -1]);
+                int mContact = contactValue.intValue();
+                mContact = mContact & 0xFF;
 
                 Log.i(TAG, "Contact value: " + mContact);
 
