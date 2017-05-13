@@ -8,7 +8,7 @@
 #include "renderer.hpp"
 #include "sprite.h"
 #include <jni.h>
-#include <GLES2/gl2.h>
+#include <GLES3/gl31.h>
 #include <cmath>
 #include <climits>
 
@@ -71,7 +71,6 @@ namespace EasyAR {
     HelloAR::HelloAR() : renderer("shaders/png.vsh", "shaders/png.fsh") {
       view_size[0] = -1;
       srand(time(NULL));
-      posePrinted = false;
     }
 
     void HelloAR::initGL()
@@ -179,10 +178,10 @@ namespace EasyAR {
               }
             }
           } else if (sprites[i].state == sprite::SpriteState::SMASHED) {
-            if (sprite.time_out == 0) {
-              sprite[i].state == sprite::SpriteState::DEAD;
+            if (sprites[i].time_out == 0) {
+              sprites[i].state == sprite::SpriteState::DEAD;
             } else {
-              sprite.time_out--;
+              sprites[i].time_out--;
             }
           }
         }
