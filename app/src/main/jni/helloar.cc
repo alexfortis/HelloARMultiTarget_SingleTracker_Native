@@ -6,6 +6,8 @@
 
 #include "ar.hpp"
 #include "renderer.hpp"
+#include "box_renderer.hpp"
+#include "png_renderer.hpp"
 #include "sprite.h"
 #include <jni.h>
 #include <GLES2/gl2.h>
@@ -55,7 +57,7 @@ HelloAR::HelloAR()
 {
     view_size[0] = -1;
     srand(time(NULL));
-    renderer = Renderer("shaders/png.vsh", "shaders/png.fsh");
+    renderer = Box_Renderer("shaders/png.vsh", "shaders/png.fsh");
 }
 
 void HelloAR::initGL()
