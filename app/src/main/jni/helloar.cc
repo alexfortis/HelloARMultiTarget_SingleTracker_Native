@@ -79,7 +79,7 @@ namespace EasyAR {
       srand(time(NULL));
       //renderer = new Smashing::Box_Renderer();
       renderer = new Smashing::PNG_Renderer();
-    }
+    }1
 
     void HelloAR::initGL()
     {

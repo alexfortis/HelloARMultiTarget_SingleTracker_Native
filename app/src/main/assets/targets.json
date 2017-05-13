@@ -23,6 +23,11 @@
     },
     {
       "image" : "image_targets/pebbles.jpg",
+      "name" : "pebbles-medium",
+      "size" : [12.2, 7.7]
+    },
+    {
+      "image" : "image_targets/pebbles.jpg",
       "name" : "pebbles-small",
       "size" : [10.1, 6.4]
     },
