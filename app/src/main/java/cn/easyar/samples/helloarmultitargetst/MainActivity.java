@@ -44,6 +44,7 @@ public class MainActivity extends ActionBarActivity{
     private native boolean nativeInit();
     private native void nativeDestory();
     private native void nativeRotationChange(boolean portrait);
+    private native void contactChanged(boolean contact);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

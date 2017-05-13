@@ -32,6 +32,7 @@ extern "C" {
   JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(nativeResizeGL(JNIEnv* env, jobject object, jint w, jint h));
   JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(nativeRender(JNIEnv* env, jobject obj));
   JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(nativeRotationChange(JNIEnv* env, jobject obj, jboolean portrait));
+  JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(contactChanged(JNIEnv* env, jobject, jboolean contact));
 };
 
 namespace EasyAR {
@@ -237,4 +238,7 @@ JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(nativeRender(JNIEnv*, jobject))
 JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(nativeRotationChange(JNIEnv*, jobject, jboolean portrait))
 {
   ar.setPortrait(portrait);
+}
+
+JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(contactChanged(JNIEnv*, jobject, jboolean contact)) {
 }
