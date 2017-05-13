@@ -7,9 +7,9 @@
 #define TEXTURE_HPP
 
 #if defined __APPLE__
-#include <OpenGLES/ES2/gl.h>
+#include <OpenGLES/ES3/gl.h>
 #else
-#include <GLES2/gl2.h>
+#include <GLES3/gl31.h>
 #endif
 
 namespace Smashing {

@@ -4,27 +4,32 @@
     {
       "image" : "image_targets/candy.jpg",
       "name" : "candy",
-      "size" : []
+      "size" : [51, 32]
     },
     {
-      "image" : "image_targets/qrcode.jpg",
+      "image" : "image_targets/qrcode.png",
       "name" : "qrcode",
-      "size" : []
+      "size" : [35, 35]
     },
     {
-      "image" : "image_targets/qrcode.jpg",
+      "image" : "image_targets/qrcode.png",
       "name" : "qrcode-small",
-      "size" : []
+      "size" : [7, 7]
     },
     {
       "image" : "image_targets/pebbles.jpg",
       "name" : "pebbles",
-      "size" : []
+      "size" : [25.5, 16.5]
     },
     {
       "image" : "image_targets/geometric2.jpg",
       "name" : "geometric-small",
-      "size" : []
+      "size" : [8.9, 8.9]
+    },
+    {
+      "image" : "image_targets/geometric2.jpg",
+      "name" : "geometric",
+      "size" : [17.8, 17.8]
     }
   ]
 }

@@ -21,7 +21,7 @@
 #endif
 
 #define JNIFUNCTION_NATIVE(sig) Java_cn_easyar_samples_helloarmultitargetst_MainActivity_##sig
-#define MAX_SPRITES 5
+#define MAX_SPRITES 2
 #define FOOT_TARGET 0
 #define SPRITE_TARGET 1
 
@@ -48,19 +48,23 @@ namespace EasyAR {
 
         static const char * foot_image;
         static const char * game_image;
+        static const float activationThreshold;
+
       private:
         sprite sprites[MAX_SPRITES];
         Vec2I view_size;
         Renderer renderer;
+        bool posePrinted;
     };
 
-    const char * HelloAR::foot_image = "qrcode-small";
+    const char * HelloAR::foot_image = "pebbles";
     const char * HelloAR::game_image = "candy";
+    const float HelloAR::activationThreshold = 0.5;
 
-    HelloAR::HelloAR()
-    {
+    HelloAR::HelloAR() : renderer("shaders/png.vsh", "shaders/png.fsh") {
       view_size[0] = -1;
       srand(time(NULL));
+      posePrinted = false;
     }
 
     void HelloAR::initGL()
@@ -109,20 +113,26 @@ namespace EasyAR {
           game_target = i;
       }
 
+      /*
+      if (foot_target != -1) {
+        LOGI("Foot target index: %d\n", foot_target);
+      }
+
+      if (game_target != -1) {
+        LOGI("Game target index: %d\n", game_target);
+      }
+      */
+
       // Get positioning data for the foot
       Matrix34F foot_pose;
+      bool foot_valid = false;
       if (foot_target != -1 && 
           frame.targets()[foot_target].status() == AugmentedTarget::kTargetStatusTracked) {
         foot_pose = frame.targets()[foot_target].pose();
+        foot_valid = true;
       }
 
       // Printing the pose for right now
-      for (int i = 0; i < 3; ++i) {
-        for (int j = 0; j < 4; ++j) {
-          LOGI("%.2f ", foot_pose.data[3*i + j]);
-        }
-        LOGI("\n");
-      }
 
       // If the game target is not in the scene - just return
       // ---- may need to render without objects?
@@ -138,8 +148,19 @@ namespace EasyAR {
       ImageTarget gameTarget = frame.targets()[game_target].target().cast_dynamic<ImageTarget>();
 
       // Look through the sprites for collisions
-      for (int i = 0; i < MAX_SPRITES; ++i) {
-        break;
+      if (foot_valid) {
+        for (int i = 0; i < MAX_SPRITES; ++i) {
+          if (sprites[i].state == sprite::SpriteState::ALIVE) {
+            if (abs(sprites[i].x - foot_pose.data[0]) < HelloAR::activationThreshold &&
+                abs(sprites[i].y - foot_pose.data[1]) < HelloAR::activationThreshold) {
+              sprites[i].state = sprite::SpriteState::HIDDEN;
+              LOGI("Sprite %d now hidden", i);
+            }
+          } else if (sprites[i].state == sprite::SpriteState::HIDDEN) {
+            // Here need to check for contact to update state
+            continue;
+          }
+        }
       }
 
       // Now render the sprites
@@ -147,6 +168,7 @@ namespace EasyAR {
     }
   }
 }
+
 EasyAR::samples::HelloAR ar;
 
 JNIEXPORT jboolean JNICALL JNIFUNCTION_NATIVE(nativeInit(JNIEnv*, jobject))
