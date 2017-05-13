@@ -1,170 +1,170 @@
 [
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/select_dialog_multichoice_material.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/select_dialog_multichoice_material.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_menu_layout.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_action_menu_layout.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_alert_dialog_material.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_alert_dialog_material.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_screen_toolbar.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_big_media.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/notification_template_big_media.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_alert_dialog_material.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/select_dialog_singlechoice_material.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/select_dialog_singlechoice_material.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_mode_close_item_material.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_action_mode_close_item_material.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_big_media_narrow_custom.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/notification_template_big_media_narrow_custom.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_list_menu_item_layout.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_bar_view_list_nav_layout.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_dialog_title_material.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_dialog_title_material.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_dialog_title_material.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_dialog_title_material.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_media.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/notification_template_media.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_search_view.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_search_view.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_media_action.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/notification_media_action.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_lines_media.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/notification_template_lines_media.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_select_dialog_material.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_select_dialog_material.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_mode_bar.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_action_mode_bar.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_search_view.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_search_view.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_big_media_custom.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/notification_template_big_media_custom.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_alert_dialog_button_bar_material.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_alert_dialog_button_bar_material.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/select_dialog_item_material.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/select_dialog_item_material.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_part_chronometer.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/notification_template_part_chronometer.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/select_dialog_item_material.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/select_dialog_item_material.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_media_action.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/notification_media_action.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_popup_menu_header_item_layout.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_popup_menu_header_item_layout.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_list_menu_item_checkbox.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_list_menu_item_checkbox.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_screen_simple.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_screen_simple.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_big_media_narrow.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_popup_menu_item_layout.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_popup_menu_item_layout.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_screen_content_include.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_screen_content_include.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_media.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/notification_template_media.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_select_dialog_material.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_select_dialog_material.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_action_mode_bar.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_bar_title_item.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_action_bar_title_item.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_screen_toolbar.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_screen_toolbar.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_big_media.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/notification_template_big_media.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_media_cancel_action.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/notification_media_cancel_action.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_media_custom.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/notification_template_media_custom.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_activity_chooser_view_list_item.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_activity_chooser_view_list_item.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_screen_content_include.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/support_simple_spinner_dropdown_item.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/support_simple_spinner_dropdown_item.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_activity_chooser_view.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_menu_item_layout.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_action_menu_item_layout.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/activity_main.xml",
-        "source": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/res/layout/activity_main.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/activity_main.xml",
+        "source": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_list_menu_item_icon.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_list_menu_item_icon.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_screen_simple_overlay_action_mode.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_screen_simple_overlay_action_mode.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_list_menu_item_radio.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_list_menu_item_radio.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_big_media_narrow.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/notification_template_big_media_narrow.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/notification_template_part_chronometer.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_expanded_menu_layout.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_expanded_menu_layout.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_action_bar_up_container.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_action_bar_up_container.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_media_cancel_action.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/notification_media_cancel_action.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_media_custom.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/notification_template_media_custom.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_screen_simple.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_screen_simple.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_big_media_custom.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/notification_template_big_media_custom.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/abc_activity_chooser_view.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/abc_activity_chooser_view.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_lines_media.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/notification_template_lines_media.xml"
     },
     {
-        "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/notification_template_part_time.xml",
-        "source": "/home/ryan/.android/build-cache/7daa3e34ffd8635b36f542f04df68bbe155db0a5/output/res/layout/notification_template_part_time.xml"
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/Users/alexstrong/.android/build-cache/fa65e20827d3fcdc7330dec5267c4c2bb3426382/output/res/layout/select_dialog_singlechoice_material.xml"
     }
 ]

@@ -92,62 +92,122 @@ namespace Smashing {
     EasyAR::Vec2F sprite_size;
     sprite_size[0] = size[0]/5;
     sprite_size[1] = size[1]/5;
+
+    float height = size[0] / 1000;
     for(size_t i = 0; i < nsprites; i++) {
+      sprite ant = sprites[i];
+      switch(ant.state) {
+        case sprite::SpriteState::ALIVE:
+          {
+          glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
+          float base = size[1];
+          //float height = base + 2.0f;
 
-        sprite ant = sprites[i];
-
-        glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
-        float base = size[1];
-        //float height = base + 2.0f;
-
-        float height = size[0] / 1000;
-
-        const GLfloat cube_vertices[8][3] = {
-            /* +z */{size[0] / 2, size[1] / 2, height / 2}, {size[0] / 2, -size[1] / 2, height / 2}, {-size[0] / 2, -size[1] / 2, height / 2}, {-size[0] / 2, size[1] / 2, height / 2},
-            /* -z */{size[0] / 2, size[1] / 2, 0}, {size[0] / 2, -size[1] / 2, 0}, {-size[0] / 2, -size[1] / 2, 0}, {-size[0] / 2, size[1] / 2, 0}};
-
-
-        glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertices), cube_vertices, GL_DYNAMIC_DRAW);
-
-        glEnable(GL_BLEND);
-        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-        glEnable(GL_DEPTH_TEST);
-        glUseProgram(program);
-
-        glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
-        glEnableVertexAttribArray(pos_coord_box);
-        glVertexAttribPointer(pos_coord_box, 3, GL_FLOAT, GL_FALSE, 0, 0);
-        glBindBuffer(GL_ARRAY_BUFFER, vbo_color_box);
-        glEnableVertexAttribArray(pos_color_box);
-        glVertexAttribPointer(pos_color_box, 4, GL_UNSIGNED_BYTE, GL_TRUE, 0, 0);
-        glUniformMatrix4fv(pos_trans_box, 1, 0, cameraview.data);
-        glUniformMatrix4fv(pos_proj_box, 1, 0, projectionMatrix.data);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_faces_box);
-        for(int i = 0; i < 6; i++) {
-            glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_SHORT, (void*)(i * 4 * sizeof(GLushort)));
-        }
+          const GLfloat cube_vertices[8][3] = {
+              /* +z */{size[0] / 2, size[1] / 2, height / 2}, {size[0] / 2, -size[1] / 2, height / 2}, {-size[0] / 2, -size[1] / 2, height / 2}, {-size[0] / 2, size[1] / 2, height / 2},
+              /* -z */{size[0] / 2, size[1] / 2, 0}, {size[0] / 2, -size[1] / 2, 0}, {-size[0] / 2, -size[1] / 2, 0}, {-size[0] / 2, size[1] / 2, 0}};
 
 
-        glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
+          glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertices), cube_vertices, GL_DYNAMIC_DRAW);
 
-        const GLfloat cube_vertices_2[8][3] = {
-            /* +z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, sprite_size[0] / 4},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, sprite_size[0] / 4},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, sprite_size[0] / 4},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, sprite_size[0] / 4},
-            /* -z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, 0},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, 0},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, 0},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, 0}};
+          glEnable(GL_BLEND);
+          glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+          glEnable(GL_DEPTH_TEST);
+          glUseProgram(program);
+
+          glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
+          glEnableVertexAttribArray(pos_coord_box);
+          glVertexAttribPointer(pos_coord_box, 3, GL_FLOAT, GL_FALSE, 0, 0);
+          glBindBuffer(GL_ARRAY_BUFFER, vbo_color_box);
+          glEnableVertexAttribArray(pos_color_box);
+          glVertexAttribPointer(pos_color_box, 4, GL_UNSIGNED_BYTE, GL_TRUE, 0, 0);
+          glUniformMatrix4fv(pos_trans_box, 1, 0, cameraview.data);
+          glUniformMatrix4fv(pos_proj_box, 1, 0, projectionMatrix.data);
+          glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_faces_box);
+          for(int i = 0; i < 6; i++) {
+              glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_SHORT, (void*)(i * 4 * sizeof(GLushort)));
+          }
 
 
-        //const GLfloat cube_vertices_2[8][3] = {
-          //  /* +z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, height},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, height},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, height},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, height},
-          //  /* -z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, base},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, base},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, base},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, base}};
+          glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
 
-        glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertices_2), cube_vertices_2, GL_DYNAMIC_DRAW);
-        glEnableVertexAttribArray(pos_coord_box);
-        glVertexAttribPointer(pos_coord_box, 3, GL_FLOAT, GL_FALSE, 0, 0);
-        glBindBuffer(GL_ARRAY_BUFFER, vbo_color_box_2);
-        glEnableVertexAttribArray(pos_color_box);
-        glVertexAttribPointer(pos_color_box, 4, GL_UNSIGNED_BYTE, GL_TRUE, 0, 0);
-        for(int i = 0; i < 6; i++) {
-            glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_SHORT, (void*)(i * 4 * sizeof(GLushort)));
-        }
+          const GLfloat cube_vertices_2[8][3] = {
+              /* +z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, sprite_size[0] / 4},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, sprite_size[0] / 4},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, sprite_size[0] / 4},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, sprite_size[0] / 4},
+              /* -z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, 0},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, 0},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, 0},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, 0}};
+
+
+          //const GLfloat cube_vertices_2[8][3] = {
+            //  /* +z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, height},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, height},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, height},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, height},
+            //  /* -z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, base},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, base},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, base},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, base}};
+
+          glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertices_2), cube_vertices_2, GL_DYNAMIC_DRAW);
+          glEnableVertexAttribArray(pos_coord_box);
+          glVertexAttribPointer(pos_coord_box, 3, GL_FLOAT, GL_FALSE, 0, 0);
+          glBindBuffer(GL_ARRAY_BUFFER, vbo_color_box_2);
+          glEnableVertexAttribArray(pos_color_box);
+          glVertexAttribPointer(pos_color_box, 4, GL_UNSIGNED_BYTE, GL_TRUE, 0, 0);
+          for(int i = 0; i < 6; i++) {
+              glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_SHORT, (void*)(i * 4 * sizeof(GLushort)));
+          }
+          break;
+          }
+        case sprite::SpriteState::SMASHED:
+        {
+          //flat
+          glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
+                    float base = size[1];
+                    //float height = base + 2.0f;
+
+                    const GLfloat cube_vertices[8][3] = {
+                        /* +z */{size[0] / 2, size[1] / 2, height / 2}, {size[0] / 2, -size[1] / 2, height / 2}, {-size[0] / 2, -size[1] / 2, height / 2}, {-size[0] / 2, size[1] / 2, height / 2},
+                        /* -z */{size[0] / 2, size[1] / 2, 0}, {size[0] / 2, -size[1] / 2, 0}, {-size[0] / 2, -size[1] / 2, 0}, {-size[0] / 2, size[1] / 2, 0}};
+
+
+                    glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertices), cube_vertices, GL_DYNAMIC_DRAW);
+
+                    glEnable(GL_BLEND);
+                    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+                    glEnable(GL_DEPTH_TEST);
+                    glUseProgram(program);
+
+                    glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
+                    glEnableVertexAttribArray(pos_coord_box);
+                    glVertexAttribPointer(pos_coord_box, 3, GL_FLOAT, GL_FALSE, 0, 0);
+                    glBindBuffer(GL_ARRAY_BUFFER, vbo_color_box);
+                    glEnableVertexAttribArray(pos_color_box);
+                    glVertexAttribPointer(pos_color_box, 4, GL_UNSIGNED_BYTE, GL_TRUE, 0, 0);
+                    glUniformMatrix4fv(pos_trans_box, 1, 0, cameraview.data);
+                    glUniformMatrix4fv(pos_proj_box, 1, 0, projectionMatrix.data);
+                    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_faces_box);
+                    for(int i = 0; i < 6; i++) {
+                        glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_SHORT, (void*)(i * 4 * sizeof(GLushort)));
+                    }
+
+
+                    glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
+
+                    const GLfloat cube_vertices_2[8][3] = {
+                        /* +z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, 3*height},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, 3*height},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, 3*height},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, 3*height},
+                        /* -z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, 0},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, 0},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, 0},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, 0}};
+
+
+                    //const GLfloat cube_vertices_2[8][3] = {
+                      //  /* +z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, height},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, height},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, height},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, height},
+                      //  /* -z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, base},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, base},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, base},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, base}};
+
+                    glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertices_2), cube_vertices_2, GL_DYNAMIC_DRAW);
+                    glEnableVertexAttribArray(pos_coord_box);
+                    glVertexAttribPointer(pos_coord_box, 3, GL_FLOAT, GL_FALSE, 0, 0);
+                    glBindBuffer(GL_ARRAY_BUFFER, vbo_color_box_2);
+                    glEnableVertexAttribArray(pos_color_box);
+                    glVertexAttribPointer(pos_color_box, 4, GL_UNSIGNED_BYTE, GL_TRUE, 0, 0);
+                    for(int i = 0; i < 6; i++) {
+                        glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_SHORT, (void*)(i * 4 * sizeof(GLushort)));
+                    }
+                    break;
+                  }
+        default: continue;
+      }
     }
   }
 }

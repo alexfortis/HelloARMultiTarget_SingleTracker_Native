@@ -13,6 +13,7 @@
 #include <GLES3/gl31.h>
 #include <cmath>
 #include <climits>
+#include <time.h>
 
 
 #ifdef ANDROID
@@ -23,7 +24,7 @@
 #endif
 
 #define JNIFUNCTION_NATIVE(sig) Java_cn_easyar_samples_helloarmultitargetst_MainActivity_##sig
-#define MAX_SPRITES 2
+#define MAX_SPRITES 5
 #define FOOT_TARGET 0
 #define SPRITE_TARGET 1
 
@@ -71,15 +72,15 @@ namespace EasyAR {
 
     const char * HelloAR::foot_image = "pebbles-small";
     const char * HelloAR::game_image = "candy";
-    const float HelloAR::activationThreshold = 0.5;
+    const float HelloAR::activationThreshold = 2;
     const int HelloAR::deathTimeout = 25;
 
     HelloAR::HelloAR() {
       view_size[0] = -1;
       srand(time(NULL));
-      //renderer = new Smashing::Box_Renderer();
-      renderer = new Smashing::PNG_Renderer();
-    }1
+      renderer = new Smashing::Box_Renderer();
+      //renderer = new Smashing::PNG_Renderer();
+    }
 
     void HelloAR::initGL()
     {
@@ -175,6 +176,7 @@ namespace EasyAR {
 
       // Look through the sprites for collisions
       if (foot_valid) {
+      LOGI("I see a foot\n");
         for (int i = 0; i < MAX_SPRITES; ++i) {
           if (sprites[i].state == sprite::SpriteState::ALIVE) {
             if (abs(sprites[i].x - foot_pose.data[0]) < HelloAR::activationThreshold &&
@@ -199,7 +201,7 @@ namespace EasyAR {
             }
           } else if (sprites[i].state == sprite::SpriteState::SMASHED) {
             if (sprites[i].time_out == 0) {
-              sprites[i].state == sprite::SpriteState::DEAD;
+              sprites[i].state = sprite::SpriteState::DEAD;
             } else {
               sprites[i].time_out--;
             }

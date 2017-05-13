@@ -9,22 +9,30 @@
 #include <climits>
 #include <string>
 
-#define TOTAL_SPEED 0.0001
-#define BOARD_LENGTH 2
-#define BOARD_WIDTH 2
+#define TOTAL_SPEED 0.5
+#define BOARD_LENGTH 54
+#define BOARD_WIDTH 54
+#define MIN_X -BOARD_WIDTH
+#define MAX_X 0
+#define MIN_Y -BOARD_LENGTH
+#define MAX_Y 0
+#define NEW_VELOCITY (float)rand()/RAND_MAX * TOTAL_SPEED
+
 
 struct sprite {
 
   enum SpriteState { DEAD, ALIVE, HIDDEN, SMASHED };
   SpriteState state;
 
-  float x, y, dir, speed;
+  float x, y, xVel, yVel;
   std::string imgPath;
   int time_out;
 
   sprite(float xIn, float yIn) : x(xIn), y(yIn), time_out(0) {
-    dir = 2*(float)rand()/RAND_MAX-1;
-    speed = (float)rand()/RAND_MAX * TOTAL_SPEED;
+    /* dir = 2*(float)rand()/RAND_MAX-1; */
+    //speed = (float)rand()/RAND_MAX * TOTAL_SPEED * 2;
+    xVel = NEW_VELOCITY;
+    yVel = NEW_VELOCITY;
     state = ALIVE;
     imgPath="ant.png";
   }
@@ -40,36 +48,35 @@ struct sprite {
   }
 
   void move() {
-  /*
-    float xAmt = speed*dir,
-          yAmt = dir*(TOTAL_SPEED-speed);
-    if(x+xAmt <= -BOARD_WIDTH/2 || x+xAmt >= BOARD_WIDTH/2) {
-      if(y+yAmt <= -BOARD_LENGTH/2 || y+yAmt >= BOARD_LENGTH/2) {
-        //change both the x and y directions
-        dir = -dir;
+    if(x+xVel <= MIN_X || x+xVel >= MAX_X) {
+      if(xVel < 0) {
+        xVel = NEW_VELOCITY;
       }
       else {
-        //change only the x direction
-        dir = -dir;
-        speed = 2*TOTAL_SPEED - speed;
+        xVel = -NEW_VELOCITY;
       }
     }
-    else if(y+yAmt <= -BOARD_LENGTH/2 || y+yAmt >= BOARD_LENGTH/2) {
-      //change only the y direction
-      speed = 2*TOTAL_SPEED-speed;
+    if(y+yVel <= MIN_Y || y+yVel >= MAX_Y) {
+      if(yVel < 0) {
+        yVel = NEW_VELOCITY;
+      }
+      else {
+        yVel = -NEW_VELOCITY;
+      }
     }
-    */
-    //LOGI("Move function called");
-    move(0.1, 0.1);
+    move(xVel, yVel);
   }
 
   void die() {
     state = DEAD;
+    imgPath = "blood-stain.png";
   }
 
   void respawn() {
     state = ALIVE;
+    imgPath = "ant.png";
   }
+
 };
 
 
