@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/mipmap-xxhdpi/ic_launcher_old.png",
+        "source": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/res/mipmap-xxhdpi/ic_launcher_old.png"
+    },
+    {
         "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/mipmap-xxhdpi/ic_launcher.png",
         "source": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     }

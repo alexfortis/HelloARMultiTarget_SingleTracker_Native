@@ -3,6 +3,7 @@
 
 #include "renderer.hpp"
 #include "sprite.h"
+#include <GLES3/gl31.h>
 
 #include "easyar/matrix.hpp"
 
@@ -19,6 +20,7 @@ namespace Smashing {
                         const EasyAR::Matrix44F &cameraview,
                         EasyAR::Vec2F size,
                         sprite *sprites, size_t nsprites);
+    void rand_color();
   private:
     int pos_coord_box;
     int pos_color_box;
@@ -28,7 +30,9 @@ namespace Smashing {
     unsigned int vbo_coord_box;
     unsigned int vbo_color_box;
     unsigned int vbo_color_box_2;
-    unsigned int vbo_faces_box;    
+    unsigned int vbo_faces_box;
+
+    GLubyte colors_2[8][4];
   };
 }
 

@@ -14,6 +14,8 @@ namespace Smashing {
                         const EasyAR::Matrix44F &cameraview,
                         EasyAR::Vec2F size,
                         sprite *sprites, size_t nsprites);
+
+     void rand_color() { }
   private:
     int pos_coord;
     int pos_tex_coord;

@@ -25,8 +25,6 @@ namespace Smashing {
   void PNG_Renderer::init() {
     EasyAR::samples::Renderer::init(); // call base class init
 
-
-
     // ??? semantic binding?
     pos_coord = glGetAttribLocation(program, "coord");
     pos_tex_coord = glGetAttribLocation(program, "tex_coord");
@@ -45,10 +43,10 @@ namespace Smashing {
     LOGI("render start\n");
 
     // turn on semi-transparent
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    //glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    //glEnable(GL_BLEND);
+    //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
     // setup shaders
     glUseProgram(program);
@@ -59,7 +57,7 @@ namespace Smashing {
       // Pass texture to shader
       glActiveTexture(GL_TEXTURE0);
       GLuint texture = Smashing::load_png_asset_into_texture(sprites[i].imgPath);
-      LOGI("loaded png into texture\n");
+      LOGI("loaded %s into texture\n", sprites[i].imgPath.c_str());
       glBindTexture(GL_TEXTURE_2D, texture);
       glUniform1i(pos_tex_unit, 0);
       LOGI("pass texture to shader complete\n");
@@ -76,10 +74,10 @@ namespace Smashing {
         // {size[0] / 2, -size[1] / 2, height / 2},
         // {-size[0] / 2, -size[1] / 2, height / 2},
         // {-size[0] / 2, size[1] / 2, height / 2}
-        {1.0f/2, -1.0f/2, 0.05f},
-        {-1.0f/2, -1.0f/2, 0.05f},
-        {1.0f/2, 1.0f/2, 0.05f},
-        {-1.0f/2, 1.0f/2, 0.05f},
+        {1.0f, -1.0f, 0.05f},
+        {-1.0f, -1.0f, 0.05f},
+        {1.0f, 1.0f, 0.05f},
+        {-1.0f, 1.0f, 0.05f},
       };
       glBufferData(GL_ARRAY_BUFFER, sizeof(coords), coords, GL_DYNAMIC_DRAW);
       LOGI("pass vertex coords values to shader complete\n");

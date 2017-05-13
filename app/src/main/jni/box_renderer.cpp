@@ -1,5 +1,8 @@
 #include "box_renderer.hpp"
 
+#include <cstdlib>
+#include <ctime>
+
 #if defined __APPLE__
 #include <OpenGLES/ES3/gl.h>
 #else
@@ -20,10 +23,17 @@ namespace Smashing {
   Box_Renderer::Box_Renderer() {
     this->vertex_shader_path = "shaders/square.vsh";
     this->fragment_shader_path = "shaders/square.fsh";
-
+    colors_2[0][0] = colors_2[0][1] = colors_2[0][2] = 0; colors_2[0][3] = 255;
+    colors_2[1][0] = colors_2[1][1] = colors_2[1][2] = 0; colors_2[1][3] = 255;
+    colors_2[2][0] = colors_2[2][1] = colors_2[2][2] = 0; colors_2[2][3] = 255;
+    colors_2[3][0] = colors_2[3][1] = colors_2[3][2] = 0; colors_2[3][3] = 255;
+    colors_2[4][0] = colors_2[4][1] = colors_2[4][2] = 0; colors_2[4][3] = 255;
+    colors_2[5][0] = colors_2[5][1] = colors_2[5][2] = 0; colors_2[5][3] = 255;
+    colors_2[6][0] = colors_2[6][1] = colors_2[6][2] = 0; colors_2[6][3] = 255;
+    colors_2[7][0] = colors_2[7][1] = colors_2[7][2] = 0; colors_2[7][3] = 255;
   }
 
-  Box_Renderer::Box_Renderer(const std::string &vsp, const std::string &fsp)  {
+  Box_Renderer::Box_Renderer(const std::string &vsp, const std::string &fsp) : Box_Renderer()  {
     this->vertex_shader_path = vsp;
     this->fragment_shader_path = fsp;
   }
@@ -65,9 +75,9 @@ namespace Smashing {
         {255, 0, 0, 255}, {255, 255, 0, 255}, {0, 255, 0, 255}, {255, 0, 255, 255},
         {255, 0, 255, 255}, {255, 255, 255, 255}, {0, 255, 255, 255}, {255, 0, 255, 255}};
     const GLubyte pyramid_vertex_colors_2[8][4] = {
-        {255, 0, 0, 255}, {255, 255, 0, 255}, {0, 255, 0, 255}, {255, 0, 255, 255},
-        {255, 0, 255, 255}, {255, 255, 255, 255}, {0, 255, 255, 255}, {255, 0, 255, 255}};
-    glBufferData(GL_ARRAY_BUFFER, sizeof(pyramid_vertex_colors_2), pyramid_vertex_colors_2, GL_STATIC_DRAW);
+        {0, 0, 0, 255}, {0, 0, 0, 255}, {0, 0, 0, 255}, {0, 0, 0, 255},
+        {0, 0, 0, 255}, {0, 0, 0, 255}, {0, 0, 0, 255}, {0, 0, 0, 255}};
+    glBufferData(GL_ARRAY_BUFFER, sizeof(colors_2), colors_2, GL_STATIC_DRAW);
 
     glGenBuffers(1, &vbo_faces_box);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_faces_box);
@@ -144,6 +154,7 @@ namespace Smashing {
           glEnableVertexAttribArray(pos_coord_box);
           glVertexAttribPointer(pos_coord_box, 3, GL_FLOAT, GL_FALSE, 0, 0);
           glBindBuffer(GL_ARRAY_BUFFER, vbo_color_box_2);
+          glBufferData(GL_ARRAY_BUFFER, sizeof(colors_2), colors_2, GL_DYNAMIC_DRAW);
           glEnableVertexAttribArray(pos_color_box);
           glVertexAttribPointer(pos_color_box, 4, GL_UNSIGNED_BYTE, GL_TRUE, 0, 0);
           for(int i = 0; i < 6; i++) {
@@ -199,6 +210,7 @@ namespace Smashing {
                     glEnableVertexAttribArray(pos_coord_box);
                     glVertexAttribPointer(pos_coord_box, 3, GL_FLOAT, GL_FALSE, 0, 0);
                     glBindBuffer(GL_ARRAY_BUFFER, vbo_color_box_2);
+                    glBufferData(GL_ARRAY_BUFFER, sizeof(colors_2), colors_2, GL_DYNAMIC_DRAW);
                     glEnableVertexAttribArray(pos_color_box);
                     glVertexAttribPointer(pos_color_box, 4, GL_UNSIGNED_BYTE, GL_TRUE, 0, 0);
                     for(int i = 0; i < 6; i++) {
@@ -208,6 +220,22 @@ namespace Smashing {
                   }
         default: continue;
       }
+
+
+
     }
   }
+        void Box_Renderer::rand_color() {
+          for (int i = 0; i < 3; ++i) {
+                colors_2[0][i] = (float)rand()/RAND_MAX*255; colors_2[0][3] = 255;
+                colors_2[1][i] = (float)rand()/RAND_MAX*255; colors_2[1][3] = 255;
+                colors_2[2][i] = (float)rand()/RAND_MAX*255; colors_2[2][3] = 255;
+                colors_2[3][i] = (float)rand()/RAND_MAX*255; colors_2[3][3] = 255;
+                colors_2[4][i] = (float)rand()/RAND_MAX*255; colors_2[4][3] = 255;
+                colors_2[5][i] = (float)rand()/RAND_MAX*255; colors_2[5][3] = 255;
+                colors_2[6][i] = (float)rand()/RAND_MAX*255; colors_2[6][3] = 255;
+                colors_2[7][i] = (float)rand()/RAND_MAX*255; colors_2[7][3] = 255;
+           }
+                //LOGI("New color value: %d", colors_2[0][2]);
+        }
 }

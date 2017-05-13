@@ -24,7 +24,7 @@
 #endif
 
 #define JNIFUNCTION_NATIVE(sig) Java_cn_easyar_samples_helloarmultitargetst_MainActivity_##sig
-#define MAX_SPRITES 5
+#define MAX_SPRITES 6
 #define FOOT_TARGET 0
 #define SPRITE_TARGET 1
 
@@ -62,11 +62,11 @@ namespace EasyAR {
         void setContact(bool contact) {
           foot_contact = contact;
         }
+        Renderer * renderer;
 
       private:
         sprite sprites[MAX_SPRITES];
         Vec2I view_size;
-        Renderer * renderer;
         bool foot_contact;
     };
 
@@ -78,8 +78,8 @@ namespace EasyAR {
     HelloAR::HelloAR() {
       view_size[0] = -1;
       srand(time(NULL));
-      //renderer = new Smashing::Box_Renderer();
-      renderer = new Smashing::PNG_Renderer();
+      renderer = new Smashing::Box_Renderer();
+      //renderer = new Smashing::PNG_Renderer();
     }
 
     void HelloAR::initGL()
@@ -162,6 +162,10 @@ namespace EasyAR {
         foot_valid = true;
       }
 
+      Matrix44F glFootPose;
+      if (foot_valid) {
+        glFootPose = getPoseGL(foot_pose);
+      }
       // Printing the pose for right now
 
       // If the game target is not in the scene - just return
@@ -172,13 +176,25 @@ namespace EasyAR {
       }
 
 
-      ImageTarget gameTarget = frame.targets()[game_target].target().cast_dynamic<ImageTarget>();
+      AugmentedTarget gameMat = frame.targets()[game_target];
+      Matrix34F gamePose = gameMat.pose();
+      ImageTarget gameTarget = gameMat.target().cast_dynamic<ImageTarget>();
 
       // Look through the sprites for collisions
       if (foot_valid) {
-      LOGI("I see a foot\n");
         for (int i = 0; i < MAX_SPRITES; ++i) {
           if (sprites[i].state == sprite::SpriteState::ALIVE) {
+            LOGI("Sprite %d with x: %.2f and y: %.2f", i, sprites[i].x, sprites[i].y);
+            //LOGI("Foot 1 target with coordinates: x: %.2f y: %.2f z: %.2f", foot_pose.data[3], foot_pose.data[7], foot_pose.data[11]);
+            //for (int j = 0; j < 4; ++j) {
+              //LOGI("Foot %d (%.2f, %.2f, %.2f, %.2f)", j, glFootPose.data[j*4], glFootPose.data[j*4 + 1], glFootPose.data[j*4 + 2], glFootPose.data[j*4 + 3]);
+             //}
+
+              //LOGI("Foot 2 target with coordinates: x: %.2f y: %.2f z: %.2f", foot_pose.data[3], foot_pose.data[4], foot_pose.data[5]);
+              //LOGI("Foot 3 target with coordinates: x: %.2f y: %.2f z: %.2f", foot_pose.data[6], foot_pose.data[7], foot_pose.data[8]);
+              //LOGI("Foot 4 target with coordinates: x: %.2f y: %.2f z: %.2f", foot_pose.data[9], foot_pose.data[10], foot_pose.data[11]);
+
+            //LOGI("Game target with coordinates: x: %.2f y: %.2f z: %.2f", gamePose.data[0], gamePose.data[1], gamePose.data[2]);
             if (abs(sprites[i].x - foot_pose.data[0]) < HelloAR::activationThreshold &&
                 abs(sprites[i].y - foot_pose.data[1]) < HelloAR::activationThreshold) {
                 if (foot_contact) {
@@ -275,4 +291,7 @@ JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(nativeRotationChange(JNIEnv*, jobject,
 
 JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(contactChanged(JNIEnv*, jobject, jboolean contact)) {
   ar.setContact(contact);
+  LOGI("Contact change JNI with value: %d", contact);
+  if (contact)
+    ar.renderer->rand_color();
 }

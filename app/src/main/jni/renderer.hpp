@@ -29,6 +29,7 @@ public:
                 Vec2F size,
                 sprite *sprites, size_t nsprites) = 0;
     virtual ~Renderer();
+    virtual void rand_color() = 0;
 protected:
     std::string vertex_shader_path;
     std::string fragment_shader_path;
