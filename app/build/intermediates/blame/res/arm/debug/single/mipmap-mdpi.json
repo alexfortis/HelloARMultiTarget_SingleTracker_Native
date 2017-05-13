@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/mipmap-mdpi/ic_launcher.png",
-        "source": "/Users/alexstrong/Downloads/EasyARSDKSamples/Android/HelloARMultiTarget_SingleTracker_Native/app/src/main/res/mipmap-mdpi/ic_launcher.png"
-    },
-    {
         "merged": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/build/intermediates/res/merged/arm/debug/mipmap-mdpi/ic_launcher.png",
         "source": "/home/ryan/workspace/binghamton/spring17/CS576/project/HelloARMultiTarget_SingleTracker_Native/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     }

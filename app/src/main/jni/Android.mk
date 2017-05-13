@@ -25,6 +25,8 @@ LOCAL_SRC_FILES := ar.cc \
 		   filedata.cpp \
 		   rawimage.cpp \
 		   shader.cpp \
+		   box_renderer.cpp \
+		   png_renderer.cpp \
 		   texture.cpp
 include $(BUILD_SHARED_LIBRARY)
 

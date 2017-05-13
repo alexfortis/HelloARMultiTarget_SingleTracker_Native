@@ -9,9 +9,9 @@
 #include <climits>
 #include <string>
 
-#define TOTAL_SPEED 0.0025
-#define BOARD_LENGTH 6
-#define BOARD_WIDTH 6
+#define TOTAL_SPEED 0.0001
+#define BOARD_LENGTH 2
+#define BOARD_WIDTH 2
 
 struct sprite {
 
@@ -21,6 +21,7 @@ struct sprite {
   float x, y, dir, speed;
   std::string imgPath;
   int time_out;
+
   sprite(float xIn, float yIn) : x(xIn), y(yIn), time_out(0) {
     dir = 2*(float)rand()/RAND_MAX-1;
     speed = (float)rand()/RAND_MAX * TOTAL_SPEED;
@@ -39,6 +40,7 @@ struct sprite {
   }
 
   void move() {
+  /*
     float xAmt = speed*dir,
           yAmt = dir*(TOTAL_SPEED-speed);
     if(x+xAmt <= -BOARD_WIDTH/2 || x+xAmt >= BOARD_WIDTH/2) {
@@ -56,7 +58,9 @@ struct sprite {
       //change only the y direction
       speed = 2*TOTAL_SPEED-speed;
     }
-    move(xAmt, yAmt);
+    */
+    //LOGI("Move function called");
+    move(0.1, 0.1);
   }
 
   void die() {

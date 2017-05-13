@@ -31,9 +31,9 @@ namespace Smashing {
     glGenBuffers(1, &vbo_tex_coord);
   }
 
-  void PNG_Renderer::render(const Matrix44F &projectionMatrix,
-                            const Matrix44F &cameraview,
-                            Vec2F size,
+  void PNG_Renderer::render(const EasyAR::Matrix44F &projectionMatrix,
+                            const EasyAR::Matrix44F &cameraview,
+                            EasyAR::Vec2F size,
                             sprite *sprites, size_t nsprites) {
     LOGI("render start\n");
 

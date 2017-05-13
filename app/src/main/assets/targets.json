@@ -30,6 +30,10 @@
       "image" : "image_targets/geometric2.jpg",
       "name" : "geometric",
       "size" : [17.8, 17.8]
+    },
+    {
+      "image" : "sightplus/argame00.jpg",
+      "name" : "argame"
     }
   ]
 }

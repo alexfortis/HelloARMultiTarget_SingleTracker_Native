@@ -6,12 +6,12 @@
 
 namespace Smashing {
 
-  class PNG_Renderer() : public EasyAR::samples::Renderer {
+  class PNG_Renderer : public EasyAR::samples::Renderer {
   public:
     virtual void init();
-    virtual void render(const Matrix44F &projectionMatrix,
-                        const Matrix44F &cameraview,
-                        Vec2F size,
+    virtual void render(const EasyAR::Matrix44F &projectionMatrix,
+                        const EasyAR::Matrix44F &cameraview,
+                        EasyAR::Vec2F size,
                         sprite *sprites, size_t nsprites);
   private:
     int pos_coord;
@@ -21,7 +21,7 @@ namespace Smashing {
     int pos_proj;
     unsigned int vbo_coord;
     unsigned int vbo_tex_coord;    
-  }
+  };
   
 }
 

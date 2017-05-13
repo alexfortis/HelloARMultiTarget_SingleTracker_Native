@@ -17,6 +17,13 @@
 
 namespace Smashing {
 
+  Box_Renderer::Box_Renderer(const std::string &vsp, const std::string &fsp)  {
+    this->vertex_shader_path = vsp;
+    this->fragment_shader_path = fsp;
+  }
+
+  Box_Renderer::~Box_Renderer() {}
+
   void Box_Renderer::init() {
     EasyAR::samples::Renderer::init(); // call base class init
 
@@ -68,34 +75,39 @@ namespace Smashing {
     
   }
 
-  void PNG_Renderer::render(const Matrix44F &projectionMatrix,
-                            const Matrix44F &cameraview,
-                            Vec2F size,
+  void Box_Renderer::render(const EasyAR::Matrix44F &projectionMatrix,
+                            const EasyAR::Matrix44F &cameraview,
+                            EasyAR::Vec2F size,
                             sprite *sprites, size_t nsprites) {
-    if(!printed) {
+   /* if(!printed) {
         printed = true;
         LOGI("size[0]=%.2f, size[1]=%.2f\n", size[0], size[1]);
-    }
-    Vec2F sprite_size;
+    }*/
+    EasyAR::Vec2F sprite_size;
     sprite_size[0] = size[0]/5;
     sprite_size[1] = size[1]/5;
-    for(size_t i = 0; i < n_sprites; i++) {
+    for(size_t i = 0; i < nsprites; i++) {
+
         sprite ant = sprites[i];
 
         glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
+        float base = size[1];
+        //float height = base + 2.0f;
+
         float height = size[0] / 1000;
+
         const GLfloat cube_vertices[8][3] = {
             /* +z */{size[0] / 2, size[1] / 2, height / 2}, {size[0] / 2, -size[1] / 2, height / 2}, {-size[0] / 2, -size[1] / 2, height / 2}, {-size[0] / 2, size[1] / 2, height / 2},
             /* -z */{size[0] / 2, size[1] / 2, 0}, {size[0] / 2, -size[1] / 2, 0}, {-size[0] / 2, -size[1] / 2, 0}, {-size[0] / 2, size[1] / 2, 0}};
-        const GLfloat pyramid_vertices[8][3] = {
-            /* +z */{sprite_size[0]+ant.x, sprite_size[1]+ant.y, height}, {sprite_size[0]+ant.x, -sprite_size[1]+ant.y, height}, {-sprite_size[0]+ant.x, -sprite_size[1]+ant.y, height}, {-sprite_size[0]+ant.x, sprite_size[1]+ant.y, height},
-            /* -z */{(sprite_size[0]+1) / 2+ant.x, sprite_size[1] / 2+ant.y, 0}, {(sprite_size[0]) / 2 + ant.x, -sprite_size[1] / 2 + ant.y, 0}, {(-sprite_size[0]) / 2 + ant.x, -sprite_size[1] / 2 + ant.y, 0}, {(-sprite_size[0]) / 2 + ant.x, sprite_size[1] / 2 + ant.y, 0}};
+
+
         glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertices), cube_vertices, GL_DYNAMIC_DRAW);
 
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         glEnable(GL_DEPTH_TEST);
         glUseProgram(program);
+
         glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
         glEnableVertexAttribArray(pos_coord_box);
         glVertexAttribPointer(pos_coord_box, 3, GL_FLOAT, GL_FALSE, 0, 0);
@@ -109,13 +121,18 @@ namespace Smashing {
             glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_SHORT, (void*)(i * 4 * sizeof(GLushort)));
         }
 
+
         glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
+
         const GLfloat cube_vertices_2[8][3] = {
             /* +z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, sprite_size[0] / 4},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, sprite_size[0] / 4},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, sprite_size[0] / 4},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, sprite_size[0] / 4},
             /* -z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, 0},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, 0},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, 0},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, 0}};
-        const GLfloat pyramid_vertices_2[8][3] = {
-            /* +z */{sprite_size[0] / 2+ant.x, sprite_size[1] / 2+ant.y, sprite_size[0] / 2},{sprite_size[0] / 2 + ant.x, -sprite_size[1] / 2+ant.y, sprite_size[0] / 2},{-sprite_size[0] / 2 + ant.x, -sprite_size[1] / 2+ant.y, sprite_size[0] / 2},{-sprite_size[0] / 2 + ant.x, sprite_size[1] / 2+ant.y, sprite_size[0] / 2},
-            /* -z */{sprite_size[0] / 4+ant.x, sprite_size[1] / 4+ant.y, 0},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4+ant.y, 0},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4+ant.y, 0},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4+ant.y, 0}};
+
+
+        //const GLfloat cube_vertices_2[8][3] = {
+          //  /* +z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, height},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, height},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, height},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, height},
+          //  /* -z */{sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, base},{sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, base},{-sprite_size[0] / 4 + ant.x, -sprite_size[1] / 4 + ant.y, base},{-sprite_size[0] / 4 + ant.x, sprite_size[1] / 4 + ant.y, base}};
+
         glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertices_2), cube_vertices_2, GL_DYNAMIC_DRAW);
         glEnableVertexAttribArray(pos_coord_box);
         glVertexAttribPointer(pos_coord_box, 3, GL_FLOAT, GL_FALSE, 0, 0);
@@ -126,7 +143,5 @@ namespace Smashing {
             glDrawElements(GL_TRIANGLE_FAN, 4, GL_UNSIGNED_SHORT, (void*)(i * 4 * sizeof(GLushort)));
         }
     }
-    
   }
-  
 }

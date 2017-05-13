@@ -8,6 +8,7 @@
 #define __EASYAR_SAMPLE_UTILITY_SIMPLERENDERER_H__
 
 #include "sprite.h"
+#include "asset_utils.hpp"
 
 #include "easyar/matrix.hpp"
 
@@ -27,8 +28,8 @@ public:
                 const Matrix44F& cameraview,
                 Vec2F size,
                 sprite *sprites, size_t nsprites) = 0;
-    ~Renderer();
-private:
+    virtual ~Renderer();
+protected:
     std::string vertex_shader_path;
     std::string fragment_shader_path;
     unsigned int program;

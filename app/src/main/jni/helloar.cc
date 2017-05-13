@@ -44,6 +44,10 @@ namespace EasyAR {
     {
       public:
         HelloAR();
+        ~HelloAR() {
+            if (renderer != NULL)
+                delete renderer;
+        }
         virtual void initGL();
         virtual void resizeGL(int width, int height);
         virtual void render();
@@ -61,7 +65,7 @@ namespace EasyAR {
       private:
         sprite sprites[MAX_SPRITES];
         Vec2I view_size;
-        Renderer renderer;
+        Smashing::Box_Renderer * renderer;
         bool foot_contact;
     };
 
@@ -70,14 +74,15 @@ namespace EasyAR {
     const float HelloAR::activationThreshold = 0.5;
     const int HelloAR::deathTimeout = 25;
 
-    HelloAR::HelloAR() : renderer("shaders/png.vsh", "shaders/png.fsh") {
+    HelloAR::HelloAR() {
       view_size[0] = -1;
       srand(time(NULL));
+      renderer = new Smashing::Box_Renderer("shaders/square.vsh", "shaders/square.fsh");
     }
 
     void HelloAR::initGL()
     {
-      renderer.init();
+      renderer->init();
       augmenter_ = Augmenter();
       augmenter_.attachCamera(camera_);
     }
@@ -96,6 +101,31 @@ namespace EasyAR {
     }
 
     void HelloAR::render() {
+
+      /*
+    glClearColor(0.f, 0.f, 0.f, 1.f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    Frame frame = augmenter_.newFrame();
+    if(view_size[0] > 0){
+        AR::resizeGL(view_size[0], view_size[1]);
+        if(camera_ && camera_.isOpened())
+            view_size[0] = -1;
+    }
+    augmenter_.setViewPort(viewport_);
+    augmenter_.drawVideoBackground();
+    glViewport(viewport_[0], viewport_[1], viewport_[2], viewport_[3]);
+
+    for (int i = 0; i < frame.targets().size(); ++i) {
+        AugmentedTarget::Status status = frame.targets()[i].status();
+        if (status == AugmentedTarget::kTargetStatusTracked) {
+            Matrix44F projectionMatrix = getProjectionGL(camera_.cameraCalibration(), 0.2f, 500.f);
+            Matrix44F cameraview = getPoseGL(frame.targets()[i].pose());
+            ImageTarget target = frame.targets()[i].target().cast_dynamic<ImageTarget>();
+            renderer->render(projectionMatrix, cameraview, target.size(), sprites, MAX_SPRITES);
+        }
+    }
+    */
 
       glClearColor(0.f, 0.f, 0.f, 1.f);
       glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -121,16 +151,6 @@ namespace EasyAR {
           game_target = i;
       }
 
-      /*
-      if (foot_target != -1) {
-        LOGI("Foot target index: %d\n", foot_target);
-      }
-
-      if (game_target != -1) {
-        LOGI("Game target index: %d\n", game_target);
-      }
-      */
-
       // Get positioning data for the foot
       Matrix34F foot_pose;
       bool foot_valid = false;
@@ -149,9 +169,6 @@ namespace EasyAR {
         return;
       }
 
-      // Get the projection and cameraview for the game target
-      Matrix44F projectionMatrix = getProjectionGL(camera_.cameraCalibration(), 0.2f, 500.f);
-      Matrix44F cameraView = getPoseGL(frame.targets()[game_target].pose());
 
       ImageTarget gameTarget = frame.targets()[game_target].target().cast_dynamic<ImageTarget>();
 
@@ -195,8 +212,16 @@ namespace EasyAR {
         }
       }
 
+      // Get the projection and cameraview for the game target
+      Matrix44F projectionMatrix = getProjectionGL(camera_.cameraCalibration(), 0.2f, 500.f);
+      Matrix44F cameraView = getPoseGL(frame.targets()[game_target].pose());
+
+      Vec2F data = gameTarget.size();
+      data[1] = frame.targets()[game_target].pose().data[2];
+
+
       // Now render the sprites
-      renderer.render(projectionMatrix, cameraView, gameTarget.size(), sprites, MAX_SPRITES);
+      renderer->render(projectionMatrix, cameraView, gameTarget.size(), sprites, MAX_SPRITES);
     }
   }
 }

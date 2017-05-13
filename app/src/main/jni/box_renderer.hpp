@@ -4,14 +4,18 @@
 #include "renderer.hpp"
 #include "sprite.h"
 
+#include "easyar/matrix.hpp"
+
 namespace Smashing {
 
-  class Box_Renderer() : public EasyAR::samples::Renderer {
+  class Box_Renderer : public EasyAR::samples::Renderer {
   public:
+    Box_Renderer(const std::string & vsp, const std::string & fsp);
+    virtual ~Box_Renderer();
     virtual void init();
-    virtual void render(const Matrix44F &projectionMatrix,
-                        const Matrix44F &cameraview,
-                        Vec2F size,
+    virtual void render(const EasyAR::Matrix44F &projectionMatrix,
+                        const EasyAR::Matrix44F &cameraview,
+                        EasyAR::Vec2F size,
                         sprite *sprites, size_t nsprites);
   private:
     int pos_coord_box;
@@ -23,8 +27,7 @@ namespace Smashing {
     unsigned int vbo_color_box;
     unsigned int vbo_color_box_2;
     unsigned int vbo_faces_box;    
-  }
-  
+  };
 }
 
 #endif

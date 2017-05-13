@@ -4,7 +4,7 @@ uniform mat4 proj;
 attribute vec4 coord;
 attribute vec4 color;
 
-varring vec4 vcolor;
+varying vec4 vcolor;
 
 void main(void) {
      vcolor = color;
