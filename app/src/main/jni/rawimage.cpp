@@ -86,7 +86,7 @@ namespace Smashing {
     // Rationale: GL_RGBA is faster than GL_RGB on many GPUs
     if (color_type == PNG_COLOR_TYPE_PALETTE
         || color_type == PNG_COLOR_TYPE_RGB) {
-      png_set_add_alpha(png_ptr, 0xFF, PNG_FILLER_AFTER);
+      png_set_add_alpha(png_ptr, 0x00, PNG_FILLER_AFTER);
     }
 
     // Ensure 8-bit packing
