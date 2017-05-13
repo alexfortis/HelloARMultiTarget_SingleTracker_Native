@@ -65,7 +65,10 @@ void Renderer::render(const Matrix44F& projectionMatrix,
     LOGI("render start\n");
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    
+    // turn on semi-transparent
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
     // setup shaders
     glUseProgram(program);
 
@@ -92,10 +95,10 @@ void Renderer::render(const Matrix44F& projectionMatrix,
         // {size[0] / 2, -size[1] / 2, height / 2},
         // {-size[0] / 2, -size[1] / 2, height / 2},
         // {-size[0] / 2, size[1] / 2, height / 2}
-        {1.0f, -1.0f, 0.05f},
-        {-1.0f, -1.0f, 0.05f},
-        {1.0f, 1.0f, 0.05f},
-        {-1.0f, 1.0f, 0.05f},
+        {1.0f/2, -1.0f/2, 0.05f},
+        {-1.0f/2, -1.0f/2, 0.05f},
+        {1.0f/2, 1.0f/2, 0.05f},
+        {-1.0f/2, 1.0f/2, 0.05f},
       };
       glBufferData(GL_ARRAY_BUFFER, sizeof(coords), coords, GL_DYNAMIC_DRAW);
       LOGI("pass vertex coords values to shader complete\n");
