@@ -14,6 +14,10 @@
 
 #define JNIFUNCTION_NATIVE(sig) Java_cn_easyar_samples_helloarmultitargetst_PlatformAssetUtils_##sig
 
+extern "C" {
+  JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(init_1asset_1manager(JNIEnv *env, jobject thiz, jobject assetManager));
+}
+
 namespace Smashing {
   
   // Methods
@@ -42,14 +46,11 @@ namespace Smashing {
   
 }
 
-extern "C" {
 
-  JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(init_1asset_1manager(JNIEnv *env, jobject thiz, jobject assetManager)) {
-    LOGI("INIT_ASSET_MANAGER CALLED!\n");
-    Smashing::asset_manager = AAssetManager_fromJava(env, assetManager);
-    if (!Smashing::asset_manager) {
-        LOGW("Failed to setup AssetManager properly!\n");
-    }
+JNIEXPORT void JNICALL JNIFUNCTION_NATIVE(init_1asset_1manager(JNIEnv *env, jobject thiz, jobject assetManager)) {
+  LOGI("INIT_ASSET_MANAGER CALLED!\n");
+  Smashing::asset_manager = AAssetManager_fromJava(env, assetManager);
+  if (!Smashing::asset_manager) {
+    LOGW("Failed to setup AssetManager properly!\n");
   }
-    
 }
