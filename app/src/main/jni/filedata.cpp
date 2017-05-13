@@ -22,14 +22,14 @@ namespace Smashing {
     if (!asset_manager) {
         LOGW("AssetManager not setup correctly\n");
     }
-    LOGI("Getting FileData for %s started\n", path.c_str());
+    //LOGI("Getting FileData for %s started\n", path.c_str());
     AAsset *asset =
       AAssetManager_open(asset_manager, path.c_str(), AASSET_MODE_STREAMING);
     assert(asset != NULL);
     data_length_ = AAsset_getLength(asset);
     data_ = AAsset_getBuffer(asset);
     file_handle_ = asset;
-    LOGI("Getting FileData for %s complete\n", path.c_str());
+    //LOGI("Getting FileData for %s complete\n", path.c_str());
   }
 
   FileData::~FileData() {

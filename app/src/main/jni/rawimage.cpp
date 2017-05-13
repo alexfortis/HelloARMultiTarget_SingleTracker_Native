@@ -62,14 +62,11 @@ namespace Smashing {
                                       const png_infop info_ptr) {
     png_uint_32 width, height;
     int bit_depth, color_type;
-    LOGI("Parse PNG metadata start\n");
     png_read_info(png_ptr, info_ptr);
-    LOGI("got png handles\n");
     png_get_IHDR(png_ptr, info_ptr,
                  &width, &height,
                  &bit_depth, &color_type,
                  NULL, NULL, NULL);
-    LOGI("got png header\n");
     // Convert transparency to full alpha
     if (png_get_valid(png_ptr, info_ptr, PNG_INFO_tRNS)) {
       png_set_tRNS_to_alpha(png_ptr);
@@ -89,7 +86,7 @@ namespace Smashing {
     // Rationale: GL_RGBA is faster than GL_RGB on many GPUs
     if (color_type == PNG_COLOR_TYPE_PALETTE
         || color_type == PNG_COLOR_TYPE_RGB) {
-      png_set_add_alpha(png_ptr, 0xFF, PNG_FILLER_AFTER);
+      png_set_add_alpha(png_ptr, 0x00, PNG_FILLER_AFTER);
     }
 
     // Ensure 8-bit packing
@@ -104,7 +101,6 @@ namespace Smashing {
 
     // Read the new color type after updates have been made
     color_type = png_get_color_type(png_ptr, info_ptr);
-    LOGI("Parse PNG metadata complete\n");
     return (PngInfo) { width, height, color_type };
   }
 
@@ -114,10 +110,8 @@ namespace Smashing {
   static DataHandle read_entire_png_image(const png_structp png_ptr,
                                           const png_infop info_ptr,
                                           const png_uint_32 height) {
-    LOGI("decode PNG start\n");
     // calculate raw image size
     const png_size_t row_size = png_get_rowbytes(png_ptr, info_ptr);
-    LOGI("got png row_size\n");
     const int data_length = row_size * height;
     assert(row_size > 0);
 
@@ -126,13 +120,11 @@ namespace Smashing {
     assert(raw_image != NULL);
 
     // setup libpng to read image line by line
-    LOGI("setup libpng to read image line by line start\n");
     png_byte* row_ptrs[height];
     for (png_uint_32 i = 0; i < height; i++) {
       row_ptrs[i] = raw_image + i * row_size;
     }
     png_read_image(png_ptr, &row_ptrs[0]);
-    LOGI("setup libpng to read image line by line complete\n");
     return (DataHandle) { raw_image, data_length };
   }
 
@@ -148,7 +140,7 @@ namespace Smashing {
     case PNG_COLOR_TYPE_GRAY:
       return GL_LUMINANCE;
     case PNG_COLOR_TYPE_RGB_ALPHA:
-      return GL_RGBA;
+      return GL_RGBA8;
     case PNG_COLOR_TYPE_GRAY_ALPHA:
       return GL_LUMINANCE_ALPHA;
     }
@@ -172,14 +164,13 @@ namespace Smashing {
   void RawImage::load_from_png(const void *png_data, const int png_data_size) {
     assert(png_data != NULL && png_data_size > 8);
     assert(png_check_sig((void *)png_data, 8));
-    LOGI("load from png start\n");
+    //LOGI("load from png start\n");
     // prepare to read PNG
     png_structp png_ptr =
       png_create_read_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
     assert(png_ptr != NULL);
     png_infop info_ptr = png_create_info_struct(png_ptr);
     assert(info_ptr != NULL);
-    LOGI("prepare to read PNG complete\n");
     // read PNG, libpng will call callback for each part of the PNG
     ReadDataHandle png_data_handle = (ReadDataHandle) {
       { (const png_byte*)png_data, png_data_size }, 0
@@ -190,17 +181,13 @@ namespace Smashing {
       // libpng error handling: setjmp is true if error encountered
       __builtin_trap(); // 
     }
-    LOGI("read PNG complete\n");
     // parse PNG metadata and convert PNG into a format we want
     const PngInfo png_info = read_and_update_info(png_ptr, info_ptr);
-    LOGI("parse PNG metadata complete\n");
     const DataHandle raw_image =
       read_entire_png_image(png_ptr, info_ptr, png_info.height);
-    LOGI("parse PNG metadata and convert PNG into right format complete\n");
     // clean up libpng resources
     png_read_end(png_ptr, info_ptr);
     png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
-    LOGI("clean up libpng resources complete\n");
     // save raw image and metadata
     width_ = png_info.width;
     height_ = png_info.height;
@@ -208,7 +195,7 @@ namespace Smashing {
     gl_color_format_ = get_gl_color_format(png_info.color_type);
     data_ = (void*)const_cast<png_byte*>(raw_image.data);
 
-    LOGI("load from png complete\n");
+    //LOGI("load from png complete\n");
   }
 
   int RawImage::width(void) { return width_; }
