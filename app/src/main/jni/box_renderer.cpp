@@ -17,6 +17,12 @@
 
 namespace Smashing {
 
+  Box_Renderer::Box_Renderer() {
+    this->vertex_shader_path = "shaders/square.vsh";
+    this->fragment_shader_path = "shaders/square.fsh";
+
+  }
+
   Box_Renderer::Box_Renderer(const std::string &vsp, const std::string &fsp)  {
     this->vertex_shader_path = vsp;
     this->fragment_shader_path = fsp;

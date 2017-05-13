@@ -10,6 +10,8 @@ namespace Smashing {
 
   class Box_Renderer : public EasyAR::samples::Renderer {
   public:
+
+    Box_Renderer();
     Box_Renderer(const std::string & vsp, const std::string & fsp);
     virtual ~Box_Renderer();
     virtual void init();

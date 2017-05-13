@@ -17,8 +17,15 @@
 
 namespace Smashing {
 
+  PNG_Renderer::PNG_Renderer() {
+    vertex_shader_path = "shaders/png.vsh";
+    fragment_shader_path = "shaders/png.fsh";
+  }
+
   void PNG_Renderer::init() {
     EasyAR::samples::Renderer::init(); // call base class init
+
+
 
     // ??? semantic binding?
     pos_coord = glGetAttribLocation(program, "coord");
@@ -38,9 +45,9 @@ namespace Smashing {
     LOGI("render start\n");
 
     // turn on semi-transparent
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    //glEnable(GL_BLEND);
+    //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    //glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     

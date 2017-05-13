@@ -65,7 +65,7 @@ namespace EasyAR {
       private:
         sprite sprites[MAX_SPRITES];
         Vec2I view_size;
-        Smashing::Box_Renderer * renderer;
+        Renderer * renderer;
         bool foot_contact;
     };
 
@@ -77,7 +77,8 @@ namespace EasyAR {
     HelloAR::HelloAR() {
       view_size[0] = -1;
       srand(time(NULL));
-      renderer = new Smashing::Box_Renderer("shaders/square.vsh", "shaders/square.fsh");
+      //renderer = new Smashing::Box_Renderer();
+      renderer = new Smashing::PNG_Renderer();
     }
 
     void HelloAR::initGL()

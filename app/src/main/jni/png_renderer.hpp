@@ -8,6 +8,7 @@ namespace Smashing {
 
   class PNG_Renderer : public EasyAR::samples::Renderer {
   public:
+    PNG_Renderer();
     virtual void init();
     virtual void render(const EasyAR::Matrix44F &projectionMatrix,
                         const EasyAR::Matrix44F &cameraview,
